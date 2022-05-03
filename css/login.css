@@ -1,0 +1,10 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.background-image {
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.7)) , url(../img/cinema-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
