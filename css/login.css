@@ -3,8 +3,91 @@ body {
     color: #fff;
 }
 
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 14px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+article {
+    width: calc(40% - 100px);
+    border-radius: 10px;
+    padding: 40px;
+    background: rgba(181, 119, 119, 0.1);;
+}
+
+label, input{
+    display: block;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+input {
+    background: rgba(5, 7, 12, 0.3);
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
 .background-image {
-    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.7)) , url(../img/cinema-background.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.5)) , url(../img/cinema-background.jpg) no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
+}
+
+.encabezado {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.caja {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+}
+
+.campo-texto {
+    width: calc(100% - 30px);
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+.boton-login {
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.boton-login:hover {
+    background: #B57777;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.boton-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.boton-link:hover {
+    color: #B57777;
 }
