@@ -1,93 +1,99 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    /*Se define el fondo de la página con sus respectivas propiedades*/
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.5)) , url(../img/cinema-background.jpg) fixed; /*El fondo se importa mediante url y se hace un sombreado*/
+    background-repeat: no-repeat; /*El fondo no se repite*/
+    background-position: center center; /*El fondo está centrado horizontal y verticalmente*/
+    background-size: cover; /*El fondo ocupa todo el espacio*/
+    color: #fff; /*Color de texto para todo el body*/
 }
 
 h1 {
-    font-size: 70px;
-    font-weight: bold;
-    letter-spacing: 14px;
-    margin-bottom: 15px;
+    /*Propiedades para el título del sitio*/
+    font-size: 75px; /*Tamaño*/
+    font-weight: bold; /*Grosor*/
+    letter-spacing: 14px; /*Espaciado entre las letras*/
+    margin-bottom: 15px; /*Márgen para separar del subtítulo*/
 }
 
 h2 {
-    font-size: 35px;
+    /*Propiedades para el subtítulo del sitio*/
+    font-size: 40px; /*Tamaño*/
+    letter-spacing: 2px;  /*Espaciado entre las letras*/
 }
 
 article {
-    width: calc(40% - 100px);
-    border-radius: 10px;
-    padding: 40px;
-    background: rgba(181, 119, 119, 0.1);;
+    /*Propiedades para el formulario*/
+    width: calc(40% - 100px); /*Ancho*/
+    border-radius: 10px; /*Borde redondeado*/
+    padding: 40px; /*Margen interno*/
+    background: rgba(181, 119, 119, 0.1); /*Fondo con opacidad*/
 }
 
 label, input{
-    display: block;
-    width: 100%;
+    /*Propiedades para el texto Label y los campos de entrada*/
+    display: block; /*Convierte los elementos en bloque*/
+    width: 100%; /*Ancho que ocupan los elementos*/
 }
 
 label {
-    margin-bottom: 5px;
-    font-size: 20px;
+    /*Propiedades para las etiquetas Label*/
+    margin-bottom: 5px; /*Margen inferior*/
+    font-size: 20px; /*Tamaño*/
 }
 
 input {
-    background: rgba(5, 7, 12, 0.3);
-    padding: 15px;
-    margin-bottom: 30px;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.background-image {
-    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.5)) , url(../img/cinema-background.jpg) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
+    /*Propiedades para los campos de entrada*/
+    background: rgba(5, 7, 12, 0.3); /*Fondo con opacidad*/
+    padding: 20px; /*Margen interno*/
+    margin-bottom: 30px; /*Margen inferior*/
+    border: none; /*Se les quita el borde*/
+    border-radius: 5px; /*Borde redondeado*/
+    color: #fff; /*Color de texto*/
 }
 
 .encabezado {
-    width: 60%;
-    margin: auto;
-    text-align: center;
-    padding: 60px 0;
+    /*Propiedades para el título y subtítulo (h1 y h2)*/
+    width: 70%; /*Ancho que ocupa*/
+    text-align: center; /*Texto alineado en el centro de lo que ocupa*/
+    padding: 60px 0; /*Margen interno*/
 }
 
 .caja {
-    display: flex;
-    justify-content: center;
-    width: 60%;
-    margin: auto;
+    /*Propiedades para todo el contenido principal*/
+    display: flex; /*Habilita flexbox*/
+    justify-content: center; /*Centra horizontalmente los elementos*/
+    width: 70%; /*Ancho que ocupa*/
 }
 
 .campo-texto {
-    width: calc(100% - 30px);
-}
-
-::placeholder {
-    font-size: 14px;
+    /*Propiedades para los campos que se ingresa texto*/
+    width: calc(100% - 30px); /*Ancho que ocupa*/
 }
 
 .boton-login {
-    border-radius: 5px;
-    font-size: 20px;
+    /*Propiedades para el botón de "Iniciar sesión"*/
+    border-radius: 5px; /*Borde redondeado*/
+    font-size: 20px; /*Tamaño*/
 }
 
 .boton-login:hover {
-    background: #B57777;
-    cursor: pointer;
-    transition-duration: 0.5s;
+    /*Propiedades para el botón de "Iniciar sesión" cuando se pasa por encima el cursor*/
+    background: #B57777; /*Color de fondo*/
+    cursor: pointer; /*Cursor estilo puntero*/
+    transition-duration: 0.5s; /*Tiempo de duración de la transición*/
 }
 
 .boton-link {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-    margin-top: 15px;
-    font-size: 20px;
+    /*Propiedades para los links "Recuperar contraseña" y "Registrarse"*/
+    display: block; /*Convierte los elementos en bloque*/
+    width: 100%; /*Ancho que ocupa*/
+    text-decoration: none; /*Elimina decoraciones que vienen por defecto*/
+    color: #fff; /*Color de texto*/
+    margin-top: 15px; /*Margen superior*/
+    font-size: 20px; /*Tamaño*/
 }
 
 .boton-link:hover {
-    color: #B57777;
+    /*Propiedades para los links "Recuperar contraseña" y "Registrarse" cuando se pasa por encima el cursor*/
+    color: #B57777; /*Color de texto*/
 }
