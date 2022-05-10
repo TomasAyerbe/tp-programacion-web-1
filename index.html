@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Button - Entretenimiento que ves</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/pantalla-principal.css">
     <link rel="stylesheet" href="css/fuentes.css">
 </head>
 <body>
-    
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
+                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
+                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
+                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="filtros">
+            <label for="categoria">Categorías</label>
+            <select name="categoria" id="categoria" class="buscar-categoria">
+                <option value="">Seleccionar categoría</option>
+                <option value="1">Películas</option>
+                <option value="2">Series</option>
+            </select>
+        <input type="text" id="busqueda" name="busqueda" placeholder="Buscar por nombre" class="buscar-nombre">
+        </section>
+        <section class="grilla">
+            <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="Breaking Bad"></a>
+            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"></a>
+            <a href="dark.html"><img src="img/dark.jpg" alt="Dark"></a>
+            <a href="el-irlandes.html"><img src="img/el-irlandes.jpg" alt="El Irlandés"></a>
+            <a href="interestelar.html"><img src="img/interstelar.jpg" alt="Interestelar"></a>
+            <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="La Casa De Papel"></a>
+            <a href="parasite.html"><img src="img/parasite.jpg" alt="Parásitos"></a>
+            <a href="rapidos-y-furiosos.html"><img src="img/rapidos-y-furiosos.jpg" alt="Rápidos y Furiosos"></a>
+            <a href="roma.html"><img src="img/roma.jpg" alt="Rom"></a>
+            <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="Stranger Things"></a>
+            <a href="the-social-network.html"><img src="img/the-social-network.jpg" alt="Red Social"></a>
+            <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="The Umbrella Academy"></a>
+        </section>
+    </main>
 </body>
 </html>

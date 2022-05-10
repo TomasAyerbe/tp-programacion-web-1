@@ -1,0 +1,100 @@
+body {
+    /*Se define el fondo de la página con sus respectivas propiedades*/
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.5)) , url(../img/cinema-background.jpg) fixed; /*El fondo se importa mediante url y se hace un sombreado*/
+    background-repeat: no-repeat; /*El fondo no se repite*/
+    background-position: center center; /*El fondo está centrado horizontal y verticalmente*/
+    background-size: cover; /*El fondo ocupa todo el espacio*/
+    color: #fff; /*Color de texto para todo el body*/
+}
+
+header {
+    width: 80%;
+}
+
+.menu {
+    background-color: #B57777;
+    border-radius: 10px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    width: 25%;
+    list-style: none;
+    text-align: center;
+}
+
+.menu li:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.menu a {
+	text-decoration: none;
+	padding: 0 30px;
+}
+
+.icono {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.menu span {
+    display: block;
+	color: #fff;
+	font-size: 20px;
+	transition: 0.5s;
+}
+
+main {
+    width: 80%;
+}
+
+.filtros {
+    width: 80%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.filtros label {
+    padding: 14px;
+}
+
+.buscar-categoria {
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+	width: 250px;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.7));
+    padding: 15px;
+}
+
+.buscar-nombre {
+	border: 1px solid #F0F0F0;
+    border-radius: 5px;
+	width: 250px;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.7)), url(../img/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+	padding: 15px 15px 15px 50px;
+    float: right;
+}
+
+.grilla {
+    width: 90%;
+    text-align: center;
+}
+
+.grilla img {
+    width: 300px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.grilla img:hover {
+    filter: brightness(70%);
+}
