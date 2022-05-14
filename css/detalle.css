@@ -1,0 +1,223 @@
+body {
+    /*Se define el fondo de la página con sus respectivas propiedades*/
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.5)) , url(../img/cinema-background.jpg) fixed; /*El fondo se importa mediante url y se hace un sombreado*/
+    background-repeat: no-repeat; /*El fondo no se repite*/
+    background-position: center center; /*El fondo está centrado horizontal y verticalmente*/
+    background-size: cover; /*El fondo ocupa todo el espacio*/
+    color: #fff; /*Color de texto para todo el body*/
+}
+
+header {
+    width: 80%;
+}
+
+.menu {
+    background-color: #B57777;
+    border-radius: 10px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    width: 25%;
+    list-style: none;
+    text-align: center;
+}
+
+.menu li:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.menu a {
+	text-decoration: none;
+	padding: 0 30px;
+}
+
+.icono {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.menu span {
+    display: block;
+	color: #fff;
+	font-size: 20px;
+	transition: 0.5s;
+}
+
+/****************************************/
+
+.contenido-principal{
+    width: 90%;
+}
+/****************************************/
+
+/*********IFRAME Y BOTON COMENZAR********/
+.contenido-iframe{
+   text-align: center;
+    margin:auto;
+}
+
+.iframe{
+    border-radius: 10px;
+}
+
+.iframe:hover {
+    filter: brightness(80%);
+}
+
+.comenzar .boton{
+   height: 50px;
+   width: 180px;
+   color: white;
+   border: 1px solid #F0F0F0;
+   border-radius: 10px;
+   font-size: 18px;
+   letter-spacing: 1.5px;
+   font-weight: bolder;
+   background: rgba(41, 39, 39, 0.5);
+   padding: 10px;
+   font-family: "Font Awesome 5 Free"; /*ATRIBUTO DEL ICONO DE FONTAWESOME PARA QUE SE PUEDA VER*/
+ 
+
+}
+
+.boton:hover{
+    cursor: pointer;
+    background: rgba(66, 48, 48, 0.685);
+    transition-duration: .7s;
+    width: auto;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+}
+
+
+/****************************************/
+
+
+
+/****************TITULO*****************/
+.informacion h1{
+    margin: 10px 0px;
+    font-size: 50px;
+    
+    background: linear-gradient(5deg,#b19d9d, #2e150c);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent;
+    
+}
+/***************************************/
+
+/********CAPITULOS Y TEMPORADAS*********/
+.temporada{
+    width:200px;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0px 25px 18px 0px;
+    color: white;
+    font-weight: bolder;
+    background: rgba(41, 39, 39, 0.295);
+    
+}
+
+.capitulo{
+    width:200px;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    background: rgba(41, 39, 39, 0.295);
+}
+
+.temporada:hover, .capitulo:hover{
+    cursor: pointer;
+    background: rgba(66, 48, 48, 0.685);
+    transition-duration: .4s;
+    width: auto;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    
+}
+
+option{
+    background-color: #2b2a2a;
+    }
+
+
+option:checked {
+    background-color: #B57777;
+    }
+
+/***********************************/
+    
+
+
+/*************ACTORES***************/
+.actores{
+    margin: 10px 30px 10px 0px;
+}
+.actores h2{
+    background: linear-gradient(5deg,#b19d9d, #2e150c);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent;
+}
+.actores li{
+    color: white;
+    list-style:none;
+    display: inline;
+}
+
+.actores a{
+    color: white;
+    text-decoration: none;
+}
+
+.actores a:hover{
+   color: rgba(214, 109, 109, 0.384);
+   font-size: 15px;
+}
+
+/***********************************/
+
+/****************INFO***************/
+.informacion p{
+    font-size: 15px;
+    margin: 20px 0px;
+}
+/***********************************/
+
+
+
+
+/************SIMILARES**************/
+.similares ul{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.similares img {
+    width: 300px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.similares img:hover {
+    filter: brightness(70%);
+}
+/***********************************/
