@@ -56,12 +56,18 @@ header {
 .contenido-principal{
     width: 90%;
 }
+
+.contenido{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
 /****************************************/
 
 /*********IFRAME Y BOTON COMENZAR********/
 .contenido-iframe{
    text-align: center;
-    margin:auto;
+    margin-left: 60px;
 }
 
 .iframe{
@@ -72,7 +78,7 @@ header {
     filter: brightness(80%);
 }
 
-.comenzar .boton{
+.boton{
    height: 50px;
    width: 180px;
    color: white;
@@ -84,6 +90,7 @@ header {
    background: rgba(41, 39, 39, 0.5);
    padding: 10px;
    font-family: "Font Awesome 5 Free"; /*ATRIBUTO DEL ICONO DE FONTAWESOME PARA QUE SE PUEDA VER*/
+   margin-top: 10px;
  
 
 }
@@ -104,6 +111,10 @@ header {
 
 
 /****************TITULO*****************/
+.informacion{
+    margin: 0px 50px;
+}
+
 .informacion h1{
     margin: 10px 0px;
     font-size: 50px;
@@ -144,7 +155,8 @@ header {
     cursor: pointer;
     background: rgba(66, 48, 48, 0.685);
     transition-duration: .4s;
-    width: auto;
+
+    width:44%;
     font-size: 12px;
     letter-spacing: 1.5px;
     
@@ -186,8 +198,7 @@ option:checked {
 }
 
 .actores a:hover{
-   color: rgba(214, 109, 109, 0.384);
-   font-size: 15px;
+    text-decoration: underline;
 }
 
 /***********************************/
@@ -203,16 +214,12 @@ option:checked {
 
 
 /************SIMILARES**************/
-.similares ul{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-around;
-    list-style: none;
+.similares li{
+    display: inline;
 }
 
 .similares img {
-    width: 300px;
+    width: 280px;
     padding: 5px;
     border-radius: 15px;
 }
