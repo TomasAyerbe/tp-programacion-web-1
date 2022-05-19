@@ -1,0 +1,127 @@
+body{
+    /*Se define el fondo de la página con sus respectivas propiedades*/
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.5)) , url(../img/cinema-background.jpg) fixed; /*El fondo se importa mediante url y se hace un sombreado*/
+    background-repeat: no-repeat; /*El fondo no se repite*/
+    background-position: center center; /*El fondo está centrado horizontal y verticalmente*/
+    background-size: cover; /*El fondo ocupa todo el espacio*/
+    color: #fff; /*Color de texto para todo el body*/
+}
+
+
+h1 {
+    /*Propiedades para el título del sitio*/
+    font-size: 25px; /*Tamaño*/
+    font-weight: bold; /*Grosor*/
+    letter-spacing: 2px; /*Espaciado entre las letras*/
+    margin-bottom: 5px; /*Márgen para separar del subtítulo*/
+    
+}
+
+.encabezado {
+    /*Propiedades para el título y subtítulo (h1 y h2)*/
+    width: 100%; /*Ancho que ocupa*/
+    text-align: left; /*Texto alineado en el centro de lo que ocupa*/
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-top: 50px; /*margen interno superior*/
+    padding-bottom: 30px; /*margen interno inferior*/
+    
+    border-radius: 10px; /*Borde redondeado*/
+    padding: 30px; /*Margen interno*/
+}
+
+.contenedor { 
+    /*Propiedades para todo el contenido principal*/
+    display: flex; /*Habilita flexbox*/
+    justify-content: center; /*Centra horizontalmente los elementos*/
+    width: 70%; /*Ancho que ocupa*/
+}
+
+ .pago {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 85%;
+}
+
+.metodo-pago input {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.7));
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.metodo-pago {
+    margin: 14px;
+}
+
+.metodo-pago input, .metodo-pago span {
+    margin: 8px 0;
+}
+
+
+.datos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+   
+} 
+
+.campo-dato{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 26px;
+
+}
+
+.campo-dato label {
+    margin: 0;
+}
+.campo-dato input {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.7));
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    
+}
+.campo-dato input {
+    margin: 0;
+}
+.boton-confirmar {
+    /*Propiedades para el botón de "Enviar email"*/
+    border-radius: 5px; /*Borde redondeado*/
+    font-size: 15px; /*Tamaño*/
+    display: inline-block;
+    
+}
+.boton-confirmar:hover{
+    /*Propiedades para el botón de "Enviar email" cuando se pasa por encima el cursor*/
+    background: #B57777; /*Color de fondo*/
+    cursor: pointer; /*Cursor estilo puntero*/
+    transition-duration: 0.5s; /*Tiempo de duración de la transición*/
+}
+.boton-cancelar{
+    /*Propiedades para el botón de "Enviar email"*/
+    border-radius: 5px; /*Borde redondeado*/
+    font-size: 15px; /*Tamaño*/
+    display: inline-block;
+}
+.boton-cancelar:hover{
+    /*Propiedades para el botón de "Enviar email" cuando se pasa por encima el cursor*/
+    background: #B57777; /*Color de fondo*/
+    cursor: pointer; /*Cursor estilo puntero*/
+    transition-duration: 0.5s; /*Tiempo de duración de la transición*/
+}
+
