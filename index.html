@@ -13,7 +13,7 @@
     <header>
         <nav class="menu">
             <ul>
-                <li><a href="#"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
+                <li><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
                 <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
                 <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
                 <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
@@ -22,13 +22,15 @@
     </header>
     <main>
         <section class="filtros">
-            <label for="categoria">Categorías</label>
-            <select name="categoria" id="categoria" class="buscar-categoria">
-                <option value="">Seleccionar categoría</option>
-                <option value="1">Películas</option>
-                <option value="2">Series</option>
-            </select>
-        <input type="text" id="busqueda" name="busqueda" placeholder="Buscar por nombre" class="buscar-nombre">
+            <div class="buscar-categoria">
+                <label for="categoria">Categorías</label>
+                <select name="categoria" id="categoria" class="seleccionar-categoria">
+                    <option value="">Seleccionar categoría</option>
+                    <option value="1">Películas</option>
+                    <option value="2">Series</option>
+                </select>
+            </div>
+            <input type="text" id="busqueda" name="busqueda" placeholder="Buscar por nombre" class="buscar-nombre" autocomplete="off">
         </section>
         <section class="grilla">
             <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="Breaking Bad"></a>

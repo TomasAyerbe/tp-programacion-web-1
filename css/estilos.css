@@ -3,3 +3,52 @@
     padding: 0;
     font-family: 'FuenteMontserrat';
 }
+
+body {
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.5)) , url(../img/cinema-background.jpg) fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    width: 80%;
+}
+
+.menu {
+    background-color: #B57777;
+    border-radius: 10px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    width: 25%;
+    list-style: none;
+    text-align: center;
+}
+
+.menu li:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.menu a {
+	text-decoration: none;
+	padding: 0 30px;
+}
+
+.icono {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.menu span {
+    display: block;
+	color: #fff;
+	font-size: 20px;
+	transition: 0.5s;
+}
