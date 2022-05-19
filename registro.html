@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Button - Entretenimiento que ves</title>
+    <title>Registro - Play Button</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/fuentes.css">
     <link rel="stylesheet" href="css/registro.css">
@@ -17,64 +17,62 @@
     <main>
         <section class="contenedor">
             <form form action="#" method="post" autocomplete="off">
-            <article class="datos">
-                <div class="campo-dato">
-                    <label for="nombre">Nombre </label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="campo-texto" required>
-                </div>
-                <div class="campo-dato">
-                    <label for="apellido">Apellido </label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" class="campo-texto" required>
-                </div>
-                <div class="campo-dato">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" class="campo-texto" required>
-                </div>
-                <div class="campo-dato">
-                    <label for="apellido">Nombre de Usuario </label>
-                    <input type="text" name="nombre-de-usuario" id="nombre-de-usuario" placeholder=" Ingrese su nombre de usuario" class="campo-texto" required>
-                </div>
-                <div class="campo-dato">
-                    <label for="apellido">Contraseña </label>
-                    <input type="text" name="Contraseña" id="Contraseña" placeholder="Ingrese su contraseña" class="campo-texto" required>
-                </div>
-                <div class="campo-dato">
-                    <label for="apellido">Repetir Contraseña </label>
-                    <input type="text" name="repetir-contraseña" id="repetir-contraseña" placeholder="repetir contraseña" class="campo-texto" required>
-                </div>  
-            </article>
-            <article class="pago">
-                <h2>Métodos de pago</h2>
-                <div class="metodo-pago">
-                    <input type="radio" id="tarjeta" name="pago">
-                    <label for="tarjeta">Tarjeta de crédito</label>
-                    <br>
-                    <input type="number" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
-                    <input type="number" id="codigo-seguridad" name="codigo-tarjeta" placeholder="CVV">
-                </div>
-                <div class="metodo-pago">
-                    <input type="radio" id="cupon" name="pago">
-                    <label for="cupon">Cupón de pago</label>
-                    <br>
-                    <input type="checkbox" id="pago-facil" name="cupon">
-                    <label for="pago-facil">Pago Fácil</label>
-                    <input type="checkbox" id="rapi-pago" name="cupon">
-                    <label for="rapi-pago">Rapi Pago</label>
-                </div>
-                <div class="metodo-pago">
-                    <input type="radio" id="transferencia" name="pago" checked>
-                    <label for="transferencia">Transferencia bancaria</label>
-                    <br>
-                    <span>CBU: 01702046600000087865</span>
-                    <br>
-                    <input type="submit" value="Confirmar" class="boton-confirmar">
-                    <input type="button" value="Cancelar" class="boton-cancelar" onclick="location.href='login.html'">
-                </div>
-            </article>
-        </form>
+                <article class="datos">
+                    <div class="campo-dato">
+                        <label for="nombre">Nombre </label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="campo-texto" required>
+                    </div>
+                    <div class="campo-dato">
+                        <label for="apellido">Apellido </label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" class="campo-texto" required>
+                    </div>
+                    <div class="campo-dato">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" class="campo-texto" required>
+                    </div>
+                    <div class="campo-dato">
+                        <label for="apellido">Nombre de Usuario </label>
+                        <input type="text" name="nombre-de-usuario" id="nombre-de-usuario" placeholder=" Ingrese su nombre de usuario" class="campo-texto" required>
+                    </div>
+                    <div class="campo-dato">
+                        <label for="apellido">Contraseña </label>
+                        <input type="password" name="Contraseña" id="Contraseña" placeholder="Ingrese su contraseña" class="campo-texto" required>
+                    </div>
+                    <div class="campo-dato">
+                        <label for="apellido">Repetir Contraseña </label>
+                        <input type="password" name="repetir-contraseña" id="repetir-contraseña" placeholder="repetir contraseña" class="campo-texto" required>
+                    </div>  
+                </article>
+                <article class="pago">
+                    <h2>Métodos de pago</h2>
+                    <div class="metodo-pago">
+                        <input type="radio" id="tarjeta" name="pago">
+                        <label for="tarjeta">Tarjeta de crédito</label>
+                        <br>
+                        <input type="number" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
+                        <input type="number" id="codigo-seguridad" name="codigo-tarjeta" placeholder="CVV">
+                    </div>
+                    <div class="metodo-pago">
+                        <input type="radio" id="cupon" name="pago">
+                        <label for="cupon">Cupón de pago</label>
+                        <br>
+                        <input type="checkbox" id="pago-facil" name="cupon">
+                        <label for="pago-facil">Pago Fácil</label>
+                        <input type="checkbox" id="rapi-pago" name="cupon">
+                        <label for="rapi-pago">Rapi Pago</label>
+                    </div>
+                    <div class="metodo-pago">
+                        <input type="radio" id="transferencia" name="pago" checked>
+                        <label for="transferencia">Transferencia bancaria</label>
+                        <br>
+                        <span>CBU: 01702046600000087865</span>
+                        <br>
+                        <input type="submit" value="Confirmar" class="boton-confirmar">
+                        <input type="button" value="Cancelar" class="boton-cancelar" onclick="location.href='login.html'">
+                    </div>
+                </article>
+            </form>
         </section>
-
     </main>
-    
 </body>
 </html>
