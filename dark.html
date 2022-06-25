@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,93 +8,111 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/detalle.css">
     <link rel="stylesheet" href="css/fuentes.css">
-    <script src="https://kit.fontawesome.com/d1a17ba9f5.js"></script> 
+    <script src="https://kit.fontawesome.com/d1a17ba9f5.js"></script>
     <title>Dark</title>
 </head>
+
 <body>
     <header>
         <nav class="menu">
             <ul>
                 <li><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
-                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
-                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
-                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
+                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas"
+                            class="icono"><span>Películas</span></a></li>
+                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a>
+                </li>
+                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main class="contenido-principal">
-            <section class="contenido">
-                <article class="contenido-iframe">
-                    <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/IJ_AZCvCacw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <section class="contenido">
+            <article class="contenido-iframe">
+                <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/IJ_AZCvCacw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
 
                 <form>
                     <a href="https://www.youtube.com/watch?v=IJ_AZCvCacw" target="_blank">
-                    <input class="boton" type="button" value=" Comenzar" >
+                        <input class="boton" type="button" value=" Comenzar">
                     </a>
                 </form>
-                </article>
-            
+            </article>
 
-            
-                <article class="informacion">
-                    <h1>DARK</h1>
 
-                    <select name="temporadas" class="temporada" >
-                        <option value="">Seleccionar temporada</option>
-                        <option value="1">Temporada 1</option>
-                        <option value="2">Temporada 2</option>
-                        <option value="3">Temporada 3</option>
-                    </select>
 
-                    
-                    <select name="capitulos" class="capitulo" >
-                        <option value="">Seleccionar capitulo</option>
-                        <option value="1">capitulo 1</option>
-                        <option value="2">capitulo 2</option>
-                        <option value="3">capitulo 3</option>
-                        <option value="4">capitulo 4</option>
-                        <option value="5">capitulo 5</option>
-                        <option value="6">capitulo 6</option>
-                        <option value="7">capitulo 7</option>
-                        <option value="8">capitulo 8</option>
-                        <option value="9">capitulo 9</option>
-                        <option value="10">capitulo 10</option>
-                    </select>
+            <article class="informacion">
+                <h1>DARK</h1>
+                <select name="" id="temporadas" class="temporada" onchange="change(this.id, 'capitulos')">
+                    <option value="0">Seleccionar temporada</option>
+                    <option value="1">Temporada 1</option>
+                    <option value="2">Temporada 2</option>
+                    <option value="3">Temporada 3</option>
 
-                    <ul class="actores">
-                        <h2>Actores</h2>
-                        <li><a href="https://es.wikipedia.org/wiki/Charlie_Cox" target="_blank">Louis Hofmann</a></li>
-                        <li><a href="https://es.wikipedia.org/wiki/Lisa_Vicari" target="_blank">Lisa Vicari</a></li>  
-                        <li><a href="https://es.wikipedia.org/wiki/Oliver_Masucci" target="_blank">Oliver Masucci</a></li>
-                        <li><a href="https://es.wikipedia.org/wiki/Gina_Stiebitz" target="_blank">Gina Stiebitz</a></li>
-                        <li><a href="https://es.wikipedia.org/wiki/Maja_Sch%C3%B6ne" target="_blank">Maja Schöne</a></li>           
-                    </ul>
+                </select>
 
-                    <p>La desaparición de dos niños muestra los vínculos entre cuatro familias y expone el pasado de una pequeña ciudad.</p>
 
-                </article>
-            </section>
+                <select name="" id="capitulos" class="capitulo">
+                    <option value="">Seleccionar capitulo</option>
+                </select>
+
+                <ul class="actores">
+                    <h2>Actores</h2>
+                    <li><a href="https://es.wikipedia.org/wiki/Charlie_Cox" target="_blank">Louis Hofmann</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Lisa_Vicari" target="_blank">Lisa Vicari</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Oliver_Masucci" target="_blank">Oliver Masucci</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Gina_Stiebitz" target="_blank">Gina Stiebitz</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Maja_Sch%C3%B6ne" target="_blank">Maja Schöne</a></li>
+                </ul>
+
+                <p>La desaparición de dos niños muestra los vínculos entre cuatro familias y expone el pasado de una
+                    pequeña ciudad.</p>
+
+            </article>
+        </section>
 
         <aside>
-            <section class="similares">   
-             <h2>Similares</h2>
-             <ul>
-                 <li>
-                    <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="the-umbrella-academy"></a>
-                 </li>
-                 <li>
-                    <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
-                </li>
-                <li>
-                    <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
-                </li>
-                <li>
-                    <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="stranger-things"></a> 
-                </li>
-             </ul>
+            <section class="contenedor-similares">
+                <h2>Similares</h2>
+                <section class="contenedor-carousel">
+                    <button role="button" id="flecha-izq" class="flecha-izquierda"> <i
+                            class="fa-solid fa-angle-left"></i></button>
+                    <ul class="contenedor-series-pelis">
+                        <li>
+                            <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg"
+                                    alt="the-umbrella-academy"></a>
+                        </li>
+                        <li>
+                            <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
+                        </li>
+                        <li>
+                            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
+                        </li>
+                        <li>
+                            <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="stranger-things"></a>
+                        </li>
+                        <li>
+                            <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg"
+                                    alt="la-casa-de-papel"></a>
+                        </li>
+                        <li>
+                            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
+                        </li>
+                        <li>
+                            <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg"
+                                    alt="the-umbrella-academy"></a>
+                        </li>
+                    </ul>
+                    <button role="button" id="flecha-der" class="flecha-derecha"> <i
+                            class="fa-solid fa-angle-right"></i></button>
+                </section>
             </section>
         </aside>
     </main>
+    <script src="carouserl.js"></script>
 </body>
+
 </html>

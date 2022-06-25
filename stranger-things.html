@@ -39,27 +39,17 @@
                 <article class="informacion">
                     <h1>STRANGER THINGS</h1>
 
-                    <select name="temporadas" class="temporada" >
-                        <option value="">Seleccionar temporada</option>
+                    <select name="" id="temporadas" class="temporada"  onchange="change(this.id, 'capitulos')">
+                        <option value="0">Seleccionar temporada</option>
                         <option value="1">Temporada 1</option>
                         <option value="2">Temporada 2</option>
                         <option value="3">Temporada 3</option>
-                        <option value="3">Temporada 4</option>
+
                     </select>
 
                     
-                    <select name="capitulos" class="capitulo" >
+                    <select name=""  id="capitulos" class="capitulo" >
                         <option value="">Seleccionar capitulo</option>
-                        <option value="1">capitulo 1</option>
-                        <option value="2">capitulo 2</option>
-                        <option value="3">capitulo 3</option>
-                        <option value="4">capitulo 4</option>
-                        <option value="5">capitulo 5</option>
-                        <option value="6">capitulo 6</option>
-                        <option value="7">capitulo 7</option>
-                        <option value="8">capitulo 8</option>
-                        <option value="9">capitulo 9</option>
-                        <option value="10">capitulo 10</option>
                     </select>
 
                     <ul class="actores">
@@ -77,24 +67,38 @@
             </section>
 
         <aside>
-            <section class="similares">   
+            <section class="contenedor-similares">   
              <h2>Similares</h2>
-             <ul>
-                 <li>
-                    <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="the-umbrella-academy"></a>
-                 </li>
-                 <li>
-                    <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
-                </li>
-                <li>
-                    <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
-                </li>
-                <li>
-                    <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="la-casa-de-papel"></a> 
-                </li>
-             </ul>
+             <section class="contenedor-carousel">
+                <button role="button" id="flecha-izq" class="flecha-izquierda">  <i class="fa-solid fa-angle-left"></i></button> 
+                <ul  class="contenedor-series-pelis">
+                    <li>
+                        <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="the-umbrella-academy"></a>
+                    </li>
+                    <li>
+                        <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
+                    </li>
+                    <li>
+                        <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
+                    </li>
+                    <li>
+                        <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="la-casa-de-papel"></a> 
+                    </li>
+                    <li>
+                        <a href="dark.html"><img src="img/dark.jpg" alt="dark"></a>
+                    </li>
+                    <li>
+                        <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
+                    </li>
+                    <li>
+                        <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="la-casa-de-papel"></a> 
+                    </li>
+                </ul>
+                <button role="button" id="flecha-der" class="flecha-derecha"> <i class="fa-solid fa-angle-right"></i></button> 
             </section>
+         </section>
         </aside>
     </main>
+    <script src="carouserl.js"></script>
 </body>
 </html>

@@ -1,54 +1,85 @@
-.contenido-principal{
+body{
     width: 90%;
 }
 
-.contenido{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-}
+
 /****************************************/
+@media screen and (min-width:47em) {
+    .contenido{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    
+}
 
 /*********IFRAME Y BOTON COMENZAR********/
-.contenido-iframe{
-   text-align: center;
-    margin-left: 60px;
-}
 
-.iframe{
-    border-radius: 10px;
-}
 
-.iframe:hover {
-    filter: brightness(80%);
-}
+    .contenido-iframe{
+        text-align: center;
+         margin-left: 60px;
+     }
+     
+     .iframe{
+         border-radius: 10px;
+     }
 
-.boton{
-   height: 50px;
-   width: 180px;
-   color: white;
-   border: 1px solid #F0F0F0;
-   border-radius: 10px;
-   font-size: 18px;
-   letter-spacing: 1.5px;
-   font-weight: bolder;
-   background: rgba(41, 39, 39, 0.5);
-   padding: 10px;
-   font-family: "Font Awesome 5 Free"; /*ATRIBUTO DEL ICONO DE FONTAWESOME PARA QUE SE PUEDA VER*/
-   margin-top: 10px;
- 
+     .boton{
+        height: 50px;
+        width: 180px;
+        color: white;
+        border: 1px solid #F0F0F0;
+        border-radius: 10px;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        font-weight: bolder;
+        background: rgba(41, 39, 39, 0.5);
+        padding: 10px;
+        font-family: "Font Awesome 5 Free"; /*ATRIBUTO DEL ICONO DE FONTAWESOME PARA QUE SE PUEDA VER*/
+        margin-top: 10px;
+      
+     
+     }
+     
+     .boton:hover{
+         cursor: pointer;
+         background: rgba(66, 48, 48, 0.685);
+         transition-duration: .7s;
+         width: auto;
+         font-size: 20px;
+         letter-spacing: 2px;
+     }
 
-}
 
-.boton:hover{
-    cursor: pointer;
-    background: rgba(66, 48, 48, 0.685);
-    transition-duration: .7s;
-    width: auto;
-    font-size: 20px;
-    letter-spacing: 2px;
+     .iframe:hover {
+        filter: brightness(80%);
+    }
 
-}
+    
+
+     
+    @media screen and (max-width:47em) {
+    .contenido-iframe {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        }
+     .iframe{
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+        width: 100%;
+        height: 100%; 
+        }
+
+        .boton{
+            position: absolute;
+            right: 90px;
+            top:163px ;
+        }
+    }
 
 
 /****************************************/
@@ -75,7 +106,7 @@
 
 /********CAPITULOS Y TEMPORADAS*********/
 .temporada{
-    width:200px;
+    width:220px;
     border: 1px solid #F0F0F0;
     border-radius: 5px;
     padding: 10px;
@@ -87,7 +118,7 @@
 }
 
 .capitulo{
-    width:200px;
+    width:220px;
     border: 1px solid #F0F0F0;
     border-radius: 5px;
     padding: 10px;
@@ -100,8 +131,6 @@
     cursor: pointer;
     background: rgba(66, 48, 48, 0.685);
     transition-duration: .4s;
-
-    width:44%;
     font-size: 12px;
     letter-spacing: 1.5px;
     
@@ -109,6 +138,7 @@
 
 option{
     background-color: #2b2a2a;
+    
     }
 
 
@@ -158,18 +188,66 @@ option:checked {
 
 
 
-/************SIMILARES**************/
-.similares li{
-    display: inline;
-}
+/*******SIMILARES Y FLECHAS CARROUSEL********/
 
-.similares img {
-    width: 280px;
-    padding: 5px;
-    border-radius: 15px;
-}
 
-.similares img:hover {
-    filter: brightness(70%);
-}
-/***********************************/
+    .contenedor-similares img {
+        width: 280px;
+        padding: 5px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+        
+    }
+
+    .contenedor-carousel{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;   
+    }
+
+     .flecha-derecha,
+     .flecha-izquierda{
+        background: rgba(41, 39, 39, 0.295);
+        border: none;
+        position: absolute;
+        z-index: 100;
+        font-size: 40px;
+        height: 75%;
+        width: 50px;
+        cursor: pointer;
+        color: #fff;
+  
+    }
+
+    .contenedor-series-pelis{
+        display: flex;
+        list-style: none;
+    }
+    
+    .flecha-derecha{
+        right: 0;
+    }
+    
+    .flecha-izquierda{
+        left: 0;
+    }
+
+   .contenedor-series-pelis {
+        width: 100%;
+        padding: 20px 0;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .contenedor-similares img:hover,
+    .contenedor-similares .flecha-derecha:hover, 
+    .contenedor-similares .flecha-izquierda:hover{
+            filter: brightness(70%);
+    }
+         
+     
+

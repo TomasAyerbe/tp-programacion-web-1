@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,93 +8,115 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/detalle.css">
     <link rel="stylesheet" href="css/fuentes.css">
-    <script src="https://kit.fontawesome.com/d1a17ba9f5.js"></script> 
+    <script src="https://kit.fontawesome.com/d1a17ba9f5.js"></script>
     <title>The Umbrella Academy</title>
 </head>
+
 <body>
     <header>
         <nav class="menu">
             <ul>
                 <li><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
-                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
-                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
-                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
+                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas"
+                            class="icono"><span>Películas</span></a></li>
+                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a>
+                </li>
+                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main class="contenido-principal">
-            <section class="contenido">
-                <article class="contenido-iframe">
-                    <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/KHucKOK-Vik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <section class="contenido">
+            <article class="contenido-iframe">
+                <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/KHucKOK-Vik"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
 
                 <form>
                     <a href="https://www.youtube.com/watch?v=KHucKOK-Vik" target="_blank">
-                    <input class="boton" type="button" value=" Comenzar" >
+                        <input class="boton" type="button" value=" Comenzar">
                     </a>
                 </form>
-                </article>
-            
+            </article>
 
-            
-                <article class="informacion">
-                    <h1>THE UMBRELLA ACADEMY</h1>
 
-                    <select name="temporadas" class="temporada" >
-                        <option value="">Seleccionar temporada</option>
-                        <option value="1">Temporada 1</option>
-                        <option value="2">Temporada 2</option>
-                        <option value="3">Temporada 3</option>
-                    </select>
 
-                    
-                    <select name="capitulos" class="capitulo" >
-                        <option value="">Seleccionar capitulo</option>
-                        <option value="1">capitulo 1</option>
-                        <option value="2">capitulo 2</option>
-                        <option value="3">capitulo 3</option>
-                        <option value="4">capitulo 4</option>
-                        <option value="5">capitulo 5</option>
-                        <option value="6">capitulo 6</option>
-                        <option value="7">capitulo 7</option>
-                        <option value="8">capitulo 8</option>
-                        <option value="9">capitulo 9</option>
-                        <option value="10">capitulo 10</option>
-                    </select>
+            <article class="informacion">
+                <h1>THE UMBRELLA ACADEMY</h1>
 
-                    <ul class="actores">
-                        <h2>Actores</h2>
-                        <li><a href="https://es.wikipedia.org/wiki/Elliot_Page" target="_blank">Elliot Page</a></li>
-                        <li><a href="https://es.wikipedia.org/wiki/Tom_Hopper" target="_blank">Tom Hopper</a></li>  
-                        <li><a href="https://es.wikipedia.org/wiki/David_Casta%C3%B1eda" target="_blank">David Castañeda</a></li>
-                        <li><a href="https://es.wikipedia.org/wiki/Emmy_Raver-Lampman" target="_blank">Emmy Raver-Lampman</a></li>
-                        <li><a href="https://es.wikipedia.org/wiki/Robert_Sheehan" target="_blank">Robert Sheehan</a></li>           
-                    </ul>
 
-                    <p>Una familia disfuncional de superhéroes se reúne para resolver el misterio de la muerte de su padre y la amenaza del apocalipsis.</p>
+                <select name="" id="temporadas" class="temporada" onchange="change(this.id, 'capitulos')">
+                    <option value="0">Seleccionar temporada</option>
+                    <option value="1">Temporada 1</option>
+                    <option value="2">Temporada 2</option>
+                    <option value="3">Temporada 3</option>
 
-                </article>
-            </section>
+                </select>
+
+
+                <select name="" id="capitulos" class="capitulo">
+                    <option value="">Seleccionar capitulo</option>
+                </select>
+
+
+                <ul class="actores">
+                    <h2>Actores</h2>
+                    <li><a href="https://es.wikipedia.org/wiki/Elliot_Page" target="_blank">Elliot Page</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Tom_Hopper" target="_blank">Tom Hopper</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/David_Casta%C3%B1eda" target="_blank">David Castañeda</a>
+                    </li>
+                    <li><a href="https://es.wikipedia.org/wiki/Emmy_Raver-Lampman" target="_blank">Emmy
+                            Raver-Lampman</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Robert_Sheehan" target="_blank">Robert Sheehan</a></li>
+                </ul>
+
+                <p>Una familia disfuncional de superhéroes se reúne para resolver el misterio de la muerte de su padre y
+                    la amenaza del apocalipsis.</p>
+
+            </article>
+        </section>
 
         <aside>
-            <section class="similares">   
-             <h2>Similares</h2>
-             <ul>
-                 <li>
-                    <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="stranger-things"></a>
-                 </li>
-                 <li>
-                    <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
-                </li>
-                <li>
-                    <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
-                </li>
-                <li>
-                    <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="la-casa-de-papel"></a> 
-                </li>
-             </ul>
+            <section class="contenedor-similares">
+                <h2>Similares</h2>
+                <section class="contenedor-carousel">
+                    <button role="button" id="flecha-izq" class="flecha-izquierda"> <i
+                            class="fa-solid fa-angle-left"></i></button>
+                    <ul class="contenedor-series-pelis">
+                        <li>
+                            <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="stranger-things"></a>
+                        </li>
+                        <li>
+                            <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
+                        </li>
+                        <li>
+                            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
+                        </li>
+                        <li>
+                            <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg"
+                                    alt="la-casa-de-papel"></a>
+                        </li>
+                        <li>
+                            <a href="dark.html"><img src="img/dark.jpg" alt="dark"></a>
+                        </li>
+                        <li>
+                            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
+                        </li>
+                        <li>
+                            <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg"
+                                    alt="la-casa-de-papel"></a>
+                        </li>
+                    </ul>
+                    <button role="button" id="flecha-der" class="flecha-derecha"> <i
+                            class="fa-solid fa-angle-right"></i></button>
+                </section>
             </section>
         </aside>
     </main>
+    <script src="carouserl.js"></script>
 </body>
+
 </html>
