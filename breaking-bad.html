@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +10,17 @@
     <script src="https://kit.fontawesome.com/d1a17ba9f5.js"></script>
     <title>Breaking bad</title>
 </head>
-
 <body>
     <header>
         <nav class="menu">
             <ul>
                 <li><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
-                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas"
-                            class="icono"><span>Películas</span></a></li>
-                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a>
-                </li>
-                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a>
-                </li>
+                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
+                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
+                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
             </ul>
         </nav>
     </header>
-
     <main class="contenido-principal">
         <section class="contenido">
             <article class="contenido-iframe">
@@ -34,20 +28,12 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-
-                <form>
-                    <a href="https://www.youtube.com/watch?v=2gTC4uWP3_Y" target="_blank">
-                        <input class="boton" type="button" value=" Comenzar">
-                    </a>
-                </form>
+                <a href="https://www.youtube.com/watch?v=2gTC4uWP3_Y" target="_blank">
+                    <input class="boton" type="button" value=" Comenzar">
+                </a>
             </article>
-
-
-
             <article class="informacion">
                 <h1>BREAKING BAD</h1>
-
-
                 <select name="" id="temporadas" class="temporada" onchange="change(this.id, 'capitulos')">
                     <option value="0">Seleccionar temporada</option>
                     <option value="1">Temporada 1</option>
@@ -56,12 +42,9 @@
                     <option value="4">Temporada 4</option>
                     <option value="5">Temporada 5</option>
                 </select>
-
-
                 <select name="" id="capitulos" class="capitulo">
                     <option value="">Seleccionar capitulo</option>
                 </select>
-
                 <ul class="actores">
                     <h2>Actores</h2>
                     <li><a href="https://es.wikipedia.org/wiki/Bryan_Cranston" target="_blank">Bryan Cranston</a></li>
@@ -70,54 +53,53 @@
                     <li><a href="https://es.wikipedia.org/wiki/Dean_Norris" target="_blank">Dean Norris</a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Betsy_Brandt" target="_blank">Betsy Brandt</a></li>
                 </ul>
-
-
-
                 <p>El profesor calmado de química de una secundaria, Walter White cree que su vida no puede ser peor. Su
-                    salario apenas le alcanza para sostener a su familia, una situación que no mejora cuando su esposa
-                    da a luz y su hijo adolescente sufre de parálisis cerebral, pero Walter queda anonadado cuando se
-                    entera que tiene un cáncer terminal.</p>
-
+                salario apenas le alcanza para sostener a su familia, una situación que no mejora cuando su esposa
+                da a luz y su hijo adolescente sufre de parálisis cerebral, pero Walter queda anonadado cuando se
+                entera que tiene un cáncer terminal.</p>
             </article>
         </section>
-
-        <aside>
-            <section class="contenedor-similares">
-                <h2>Similares</h2>
-                <section class="contenedor-carousel">
-                    <button role="button" id="flecha-izq" class="flecha-izquierda"> <i
-                            class="fa-solid fa-angle-left"></i></button>
-                    <ul class="contenedor-series-pelis">
-                        <li>
-                            <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="Breaking Bad"></a>
-                        </li>
-                        <li>
-                            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"></a>
-                        </li>
-                        <li>
-                            <a href="dark.html"><img src="img/dark.jpg" alt="Dark"></a>
-                        </li>
-                        <li>
-                            <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="stranger-things"></a>
-                        </li>
-                        <li>
-                            <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg"
-                                    alt="the-umbrella-academy"></a>
-                        </li>
-                        <li>
-                            <a href="dark.html"><img src="img/dark.jpg" alt="Dark"></a>
-                        </li>
-                        <li>
-                            <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="Breaking Bad"></a>
-                        </li>
-                    </ul>
-                    <button role="button" id="flecha-der" class="flecha-derecha"> <i
-                            class="fa-solid fa-angle-right"></i></button>
-                </section>
+        <aside class="contenedor-similares">
+            <h2>Similares</h2>
+            <section class="contenedor-carousel">
+                <button role="button" id="flecha-izq" class="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+                <ul class="contenedor-series-pelis">
+                    <li>
+                        <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="La Casa de Papel"></a>
+                    </li>
+                    <li>
+                        <a href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"></a>
+                    </li>
+                    <li>
+                        <a href="dark.html"><img src="img/dark.jpg" alt="Dark"></a>
+                    </li>
+                    <li>
+                        <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="Stranger Things"></a>
+                    </li>
+                    <li>
+                        <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="The Umbrella Academy"></a>
+                    </li>
+                    <li>
+                        <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="La Casa de Papel"></a>
+                    </li>
+                    <li>
+                        <a href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"></a>
+                    </li>
+                    <li>
+                        <a href="dark.html"><img src="img/dark.jpg" alt="Dark"></a>
+                    </li>
+                    <li>
+                        <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="Stranger Things"></a>
+                    </li>
+                    <li>
+                        <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="The Umbrella Academy"></a>
+                    </li>
+                </ul>
+                <button role="button" id="flecha-der" class="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
             </section>
         </aside>
     </main>
-    <script src="carouserl.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/temporadas-capitulos.js"></script>
 </body>
-
 </html>

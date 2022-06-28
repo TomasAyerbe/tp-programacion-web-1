@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +8,19 @@
     <link rel="stylesheet" href="css/detalle.css">
     <link rel="stylesheet" href="css/fuentes.css">
     <script src="https://kit.fontawesome.com/d1a17ba9f5.js"></script>
-    <script src="https://kit.fontawesome.com/d1a17ba9f5.js" crossorigin="anonymous"></script>
-
-    <title>La casa de papel </title>
+    <title>La Casa de Papel </title>
 </head>
-
 <body>
     <header>
         <nav class="menu">
             <ul>
                 <li><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
-                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas"
-                            class="icono"><span>Películas</span></a></li>
-                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a>
-                </li>
-                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a>
-                </li>
+                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
+                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
+                <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
             </ul>
         </nav>
     </header>
-
     <main class="contenido-principal">
         <section class="contenido">
             <article class="contenido-iframe">
@@ -36,19 +28,12 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-
-                <form>
-                    <a href="https://www.youtube.com/watch?v=3y-6iaveY6c" target="_blank">
-                        <input class="boton" type="button" value=" Comenzar">
-                    </a>
-                </form>
+                <a href="https://www.youtube.com/watch?v=3y-6iaveY6c" target="_blank">
+                    <input class="boton" type="button" value=" Comenzar">
+                </a>
             </article>
-
-
-
             <article class="informacion">
                 <h1>LA CASA DE PAPEL</h1>
-
                 <select name="" id="temporadas" class="temporada" onchange="change(this.id, 'capitulos')">
                     <option value="0">Seleccionar temporada</option>
                     <option value="1">Temporada 1</option>
@@ -57,73 +42,63 @@
                     <option value="4">Temporada 4</option>
                     <option value="5">Temporada 5</option>
                 </select>
-
-
                 <select name="" id="capitulos" class="capitulo">
                     <option value="">Seleccionar capitulo</option>
                 </select>
-
                 <ul class="actores">
                     <h2>Actores</h2>
-                    <li><a href="https://es.wikipedia.org/wiki/%C3%9Arsula_Corber%C3%B3" target="_blank">Úrsula
-                            Corberó</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/%C3%9Arsula_Corber%C3%B3" target="_blank">Úrsula Corberó</a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Itziar_Itu%C3%B1o" target="_blank">Itziar Ituño</a></li>
                     <li><a href="https://es.wikipedia.org/wiki/%C3%81lvaro_Morte" target="_blank">Álvaro Morte</a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Paco_Tous" target="_blank">Paco Tous</a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Pedro_Alonso" target="_blank">Pedro Alonso</a></li>
                 </ul>
-
                 <p>Una banda organizada de ladrones se propone cometer el atraco del siglo en la Fábrica Nacional de
-                    Moneda y Timbre. Cinco meses de preparación quedarán reducidos a once días para poder llevar a cabo
-                    con éxito el gran golpe.</p>
-
+                Moneda y Timbre. Cinco meses de preparación quedarán reducidos a once días para poder llevar a cabo
+                con éxito el gran golpe.</p>
             </article>
         </section>
-
-        <aside>
-
-            <section class="contenedor-similares">
-                <h2>Similares</h2>
-                <section class="contenedor-carousel">
-                    <button role="button" id="flecha-izq" class="flecha-izquierda"> <i
-                            class="fa-solid fa-angle-left"></i></button>
-                    <ul class="contenedor-series-pelis">
-                        <li>
-                            <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg"
-                                    alt="the-umbrella-academy"></a>
-                        </li>
-                        <li>
-                            <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
-                        </li>
-                        <li>
-                            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
-                        </li>
-                        <li>
-                            <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="stranger-things"></a>
-                        </li>
-                        <li>
-                            <a href="dark.html"><img src="img/dark.jpg" alt="dark"></a>
-                        </li>
-                        <li>
-                            <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="breaking-bad"></a>
-                        </li>
-                        <li>
-                            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="dare-devil"></a>
-                        </li>
-                        <li>
-                            <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="stranger-things"></a>
-                    </ul>
-
-
-                    <button role="button" id="flecha-der" class="flecha-derecha"> <i
-                            class="fa-solid fa-angle-right"></i></button>
-                </section>
+        <aside class="contenedor-similares">
+            <h2>Similares</h2>
+            <section class="contenedor-carousel">
+                <button role="button" id="flecha-izq" class="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+                <ul class="contenedor-series-pelis">
+                    <li>
+                        <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="Breaking Bad"></a>
+                    </li>
+                    <li>
+                        <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="La Casa de Papel"></a>
+                    </li>
+                    <li>
+                        <a href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"></a>
+                    </li>
+                    <li>
+                        <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="Stranger Things"></a>
+                    </li>
+                    <li>
+                        <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="The Umbrella Academy"></a>
+                    </li>
+                    <li>
+                        <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="Breaking Bad"></a>
+                    </li>
+                    <li>
+                        <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="La Casa de Papel"></a>
+                    </li>
+                    <li>
+                        <a href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"></a>
+                    </li>
+                    <li>
+                        <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="Stranger Things"></a>
+                    </li>
+                    <li>
+                        <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="The Umbrella Academy"></a>
+                    </li>
+                </ul>
+                <button role="button" id="flecha-der" class="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
             </section>
         </aside>
-
-
     </main>
-    <script src="carouserl.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/temporadas-capitulos.js"></script>
 </body>
-
 </html>
