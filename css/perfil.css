@@ -1,21 +1,20 @@
 .contenedor {
     width: 90%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
-.imagen-nombre, .campo-dato {
-    margin: 26px;
+.campo-dato {
+    margin: 16px;
 }
 
 .imagen-nombre {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
+    margin: 25px auto;
+    text-align: center;
 }
 
 .imagen-nombre img {
-    max-width: 100%;
+    max-width: 25%;
 }
 
 .imagen-nombre span {
@@ -27,17 +26,16 @@ form {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    width: 85%;
+    flex-direction: column;
 }
 
 form h2 {
-    margin: 0;
+    margin: 14px;
     padding-bottom: 10px;
     border-bottom: 3px solid #fff;
 }
 
 .datos, .pago {
-    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -48,7 +46,11 @@ form h2 {
     justify-content: space-between;
 }
 
-.campo-dato h3, .campo-dato p, .campo-dato label, .campo-dato input {
+.campo-dato label {
+    margin: 0 20px 0 0;
+}
+
+.campo-dato h3, .campo-dato p, .campo-dato input {
     margin: 0;
 }
 
@@ -72,14 +74,16 @@ form h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 35px;
+    flex-direction: column;
+    padding: 15px;
 }
 
 .botones .guardar-cambios, .botones .cancelar-subscripcion {
     color: #fff;
-    font-size: 18px;
-    padding: 20px;
-    width: 250px;
+    margin: 6px 0;
+    font-size: 14px;
+    padding: 14px;
+    width: 200px;
     border-radius: 5px;
 }
 
@@ -102,4 +106,55 @@ form h2 {
 
 .botones .cancelar-subscripcion:hover {
     background-color: #ff0000af;
+}
+
+@media screen and (min-width: 1280px) {
+
+    .contenedor {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .imagen-nombre {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 15%;
+    }
+
+    .imagen-nombre img {
+        max-width: 100%;
+    }
+
+    form {
+        width: 85%;
+        flex-direction: row;
+    }
+
+    form h2 {
+        margin: 0;
+    }
+
+    .datos, .pago {
+        width: 50%;
+    }
+
+    .imagen-nombre, .campo-dato {
+        margin: 26px;
+    }
+
+    
+
+    .botones {
+        flex-direction: row;
+        padding: 35px;
+    }
+
+    .botones .guardar-cambios, .botones .cancelar-subscripcion {
+        margin: 0 16px;
+        font-size: 18px;
+        padding: 20px;
+        width: 250px;
+    }
+
 }

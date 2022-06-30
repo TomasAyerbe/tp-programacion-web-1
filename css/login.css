@@ -1,26 +1,26 @@
 h1 {
     /*Propiedades para el título del sitio*/
-    font-size: 75px; /*Tamaño*/
+    font-size: 40px; /*Tamaño*/
     font-weight: bold; /*Grosor*/
-    letter-spacing: 14px; /*Espaciado entre las letras*/
+    letter-spacing: 8px; /*Espaciado entre las letras*/
     margin-bottom: 15px; /*Márgen para separar del subtítulo*/
 }
 
 h2 {
     /*Propiedades para el subtítulo del sitio*/
-    font-size: 40px; /*Tamaño*/
+    font-size: 20px; /*Tamaño*/
     letter-spacing: 2px;  /*Espaciado entre las letras*/
 }
 
 article {
     /*Propiedades para el formulario*/
-    width: calc(40% - 100px); /*Ancho*/
+    width: calc(100% - 80px); /*Ancho*/
     border-radius: 10px; /*Borde redondeado*/
-    padding: 40px; /*Margen interno*/
+    padding: 25px; /*Margen interno*/
     background: rgba(181, 119, 119, 0.1); /*Fondo con opacidad*/
 }
 
-label, input{
+label, input {
     /*Propiedades para el texto Label y los campos de entrada*/
     display: block; /*Convierte los elementos en bloque*/
     width: 100%; /*Ancho que ocupan los elementos*/
@@ -29,14 +29,14 @@ label, input{
 label {
     /*Propiedades para las etiquetas Label*/
     margin-bottom: 5px; /*Margen inferior*/
-    font-size: 20px; /*Tamaño*/
+    font-size: 15px; /*Tamaño*/
 }
 
 input {
     /*Propiedades para los campos de entrada*/
     background: rgba(5, 7, 12, 0.3); /*Fondo con opacidad*/
-    padding: 20px; /*Margen interno*/
-    margin-bottom: 30px; /*Margen inferior*/
+    padding: 15px; /*Margen interno*/
+    margin-bottom: 20px; /*Margen inferior*/
     border: none; /*Se les quita el borde*/
     border-radius: 5px; /*Borde redondeado*/
     color: #fff; /*Color de texto*/
@@ -44,9 +44,9 @@ input {
 
 .encabezado {
     /*Propiedades para el título y subtítulo (h1 y h2)*/
-    width: 70%; /*Ancho que ocupa*/
+    width: 80%; /*Ancho que ocupa*/
     text-align: center; /*Texto alineado en el centro de lo que ocupa*/
-    padding: 60px 0; /*Margen interno*/
+    padding: 40px 0; /*Margen interno*/
 }
 
 .caja {
@@ -64,7 +64,7 @@ input {
 .boton-login {
     /*Propiedades para el botón de "Iniciar sesión"*/
     border-radius: 5px; /*Borde redondeado*/
-    font-size: 20px; /*Tamaño*/
+    font-size: 18px; /*Tamaño*/
 }
 
 .boton-login:hover {
@@ -81,10 +81,94 @@ input {
     text-decoration: none; /*Elimina decoraciones que vienen por defecto*/
     color: #fff; /*Color de texto*/
     margin-top: 15px; /*Margen superior*/
-    font-size: 20px; /*Tamaño*/
+    font-size: 15px; /*Tamaño*/
 }
 
 .boton-link:hover {
     /*Propiedades para los links "Recuperar contraseña" y "Registrarse" cuando se pasa por encima el cursor*/
     color: #B57777; /*Color de texto*/
+}
+
+@media screen and (min-width: 750px) {
+
+    h1 {
+        font-size: 56px;
+        letter-spacing: 16px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+
+    article {
+        width: calc(60% - 90px);
+        padding: 35px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    input {
+        padding: 18px;
+        margin-bottom: 25px;
+    }
+
+    .encabezado {
+        width: 75%;
+        padding: 60px 0;
+    }
+
+    .caja {
+        width: 90%;
+    }
+
+    .campo-texto {
+        width: calc(100% - 30px);
+    }
+    
+    .boton-login {
+        font-size: 20px;
+    }
+
+    .boton-link {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+  
+    h1 {
+        font-size: 75px;
+        letter-spacing: 14px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+
+    article {
+        width: calc(40% - 100px);
+        padding: 40px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+
+    input {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .encabezado {
+        width: 70%;
+    }
+
+    .boton-link {
+        font-size: 20px;
+    }
+
 }

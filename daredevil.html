@@ -24,15 +24,17 @@
     </header>
     <main class="contenido-principal">
         <section class="contenido">
-            <article class="contenido-iframe">
-                <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/Hflx3JBVqic"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <a href="https://www.youtube.com/watch?v=2gTC4uWP3_Y" target="_blank">
-                    <input class="boton" type="button" value=" Comenzar">
-                </a>
-            </article>
+            <div class="video">
+                <article class="contenido-iframe">
+                    <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/Hflx3JBVqic"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </article>
+                <div class="comenzar">
+                    <a class="boton" href="https://www.youtube.com/watch?v=2gTC4uWP3_Y" target="_blank">COMENZAR</a>
+                </div>
+            </div>
             <article class="informacion">
                 <h1>DAREDEVIL</h1>
                 <select name="" id="temporadas" class="temporada" onchange="change(this.id, 'capitulos')">

@@ -1,28 +1,33 @@
 .filtros {
-    width: calc(100% - 100px);
-    margin-top: 35px;
-    margin-bottom: 35px;
+    width: calc(100% - 90px);
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .buscar-categoria {
+    display: flex;
+    flex-direction: column;
     margin: 0;
 }
 
-.buscar-categoria label, .seleccionar-categoria {
-    padding: 14px;
+.buscar-categoria label {
+    margin: 0;
 }
 
 .seleccionar-categoria {
     background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.7));
+    margin-top: 10px;
+    padding: 14px;
+    width: 311px;
 }
 
 .seleccionar-categoria, .buscar-nombre {
     border: 1px solid #F0F0F0;
     border-radius: 5px;
-    width: 250px;
 }
 
 .buscar-nombre {
@@ -30,7 +35,8 @@
     background-repeat: no-repeat;
     background-size: contain;
 	padding: 15px 15px 15px 50px;
-    margin: 10px;
+    margin: 15px;
+    width: 244px;
 }
 
 .grilla {
@@ -46,10 +52,65 @@
 }
 
 .grilla img {
-    width: 340px;
+    width: 311px;
     border-radius: 10px;
 }
 
 .grilla img:hover {
     filter: brightness(70%);
+}
+
+@media screen and (min-width: 750px) {
+
+    .filtros {
+        width: calc(100% - 50px);
+        flex-direction: row;
+    }
+
+    .seleccionar-categoria {
+        width: 267px;
+    }
+
+    .buscar-nombre {
+        width: 200px;
+        margin-top: 48px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    
+    .filtros {
+        width: calc(100% - 100px);
+        margin-top: 35px;
+        margin-bottom: 35px;
+        flex-direction: row;
+    }
+    
+    .buscar-categoria {
+        margin: 0;
+    }
+    
+    .buscar-categoria label, .seleccionar-categoria {
+        padding: 14px;
+    }
+
+    .seleccionar-categoria, .buscar-nombre {
+        width: 250px;
+    }
+
+    .buscar-nombre {
+        padding: 15px 15px 15px 50px;
+        margin: 66px 10px 10px;
+        
+    }
+
+    .grilla a {
+        margin: 5px;
+    }
+
+    .grilla img {
+        width: 340px;
+    }
+
 }

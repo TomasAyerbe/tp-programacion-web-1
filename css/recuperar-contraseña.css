@@ -10,11 +10,11 @@ h1 {
     /*Propiedades para todo el contenido principal*/
     display: flex; /*Habilita flexbox*/
     justify-content: center; /*Centra horizontalmente los elementos*/
-    width: 70%; /*Ancho que ocupa*/
+    width: 90%; /*Ancho que ocupa*/
 }
 article {
     /*Propiedades para el formulario*/
-    width: calc(40% - 100px); /*Ancho*/
+    width: calc(100% - 80px); /*Ancho*/
     border-radius: 10px; /*Borde redondeado*/
     padding: 40px; /*Margen interno*/
     background: rgba(181, 119, 119, 0.1); /*Fondo con opacidad*/
@@ -27,17 +27,17 @@ label, input{
 label {
     /*Propiedades para las etiquetas Label*/
     margin-bottom: 5px; /*Margen inferior*/
-    font-size: 20px; /*Tamaño*/
+    font-size: 15px; /*Tamaño*/
 }
 
 input {
     /*Propiedades para los campos de entrada*/
-    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.7));
+    background: rgba(5, 7, 12, 0.3);
     padding: 20px; /*Margen interno*/
     margin-bottom: 30px; /*Margen inferior*/
     border: none; /*Se les quita el borde*/
     border-radius: 5px; /*Borde redondeado*/
-    color: #000; /*Color de texto*/
+    color: #fff; /*Color de texto*/
 }
 
 .encabezado {
@@ -55,8 +55,8 @@ input {
 .boton-enviar {
      /*Propiedades para el botón de "Enviar email"*/
      border-radius: 5px; /*Borde redondeado*/
-     font-size: 20px; /*Tamaño*/
-     color: black;
+     font-size: 16px; /*Tamaño*/
+     color: #fff;
 }
 .boton-enviar:hover{
      /*Propiedades para el botón de "Enviar email" cuando se pasa por encima el cursor*/
@@ -68,12 +68,44 @@ input {
 
      /*Propiedades para el botón de "Enviar email"*/
      border-radius: 5px; /*Borde redondeado*/
-     font-size: 20px; /*Tamaño*/
-     color: black;
+     font-size: 16px; /*Tamaño*/
+     color: #fff;
 }
 .boton-cancelar:hover{
      /*Propiedades para el botón de "Enviar email" cuando se pasa por encima el cursor*/
      background: #B57777; /*Color de fondo*/
      cursor: pointer; /*Cursor estilo puntero*/
      transition-duration: 0.5s; /*Tiempo de duración de la transición*/
+}
+
+@media screen and (min-width: 750px) {
+
+    .caja {
+        width: 80%;
+    }
+
+    article {
+        width: calc(70% - 100px);
+    }
+
+    label, .boton-enviar, .boton-cancelar {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .caja {
+        width: 70%;
+    }
+
+    article {
+        width: calc(45% - 100px);
+    }
+
+    label, .boton-enviar, .boton-cancelar {
+        font-size: 20px;
+    }
+
 }
