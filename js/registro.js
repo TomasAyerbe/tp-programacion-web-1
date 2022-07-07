@@ -6,7 +6,11 @@ function validar(){
     var regexLetras=/^[A-Za-z]+$/; //expresion regular para validar solo letras
     var regexLetrasNumeros=/^[0-9A-Za-z]+$/;
     let regexContraseña = /^(?=.{2,}[A-Za-z])(?=.{2,}\d)(?=.{2,}[@$!%#?&])[A-Za-z\d@$!%#?&]{8,}$/;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> bd456ac3fd0b530acf68851716f20074bcc5cb7b
 
     reset();
     if (!$("#nombre").val().match(regexLetras)){ /*valida que nombre sean solo letras y no este vacio*/
@@ -41,11 +45,21 @@ function validar(){
         error++;
         $("#repetir-contraseña").addClass('error');
      }
+<<<<<<< HEAD
      if (/^([1-9]){3}$/.test($("#codigo-seguridad").val())) {
+=======
+     
+     if($("#codigo-seguridad").val()==000 || $("#codigo-seguridad").val().size() !=3 ) {
+>>>>>>> bd456ac3fd0b530acf68851716f20074bcc5cb7b
         mensaje+= "<p> El codigo de seguridad no pueden ser 3 ceros</p>";
         error++;
         $("#codigo-seguridad").addClass('error');
      }
+<<<<<<< HEAD
+=======
+     //Hacer lo de la tarjeta el punto 5 c)
+     
+>>>>>>> bd456ac3fd0b530acf68851716f20074bcc5cb7b
 
     /*Si error es mayor a 0 retorna falso y muestra todo los mensajes de errores acumulado en la variable mensaje*/
     if (error>0){
@@ -67,12 +81,20 @@ function reset(){ /*Esta funciona elimina todas las clases de error*/
 }
 
 $(document).ready(function() {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> bd456ac3fd0b530acf68851716f20074bcc5cb7b
     $("#form").submit(function() {
         return validar();
     });
     $("#nombre").keyup(function() {
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> bd456ac3fd0b530acf68851716f20074bcc5cb7b
         validar();
     }); 
    /* let nombre=document.getElementById("nombre");
@@ -96,6 +118,7 @@ $(document).ready(function() {
     $("#repetir-contraseña").keyup(function(){
         validar();
     })
+<<<<<<< HEAD
 
     $("#codigo-seguridad").keyup(function(){
         validar();
@@ -103,3 +126,27 @@ $(document).ready(function() {
 
 
 });
+=======
+    
+    $("#codigo-seguridad").keyup(function(){
+        validar();
+    })
+    
+
+});
+
+
+    /*
+    //validamos un input radio
+    if (!($('input[name="sexo"]').is(':checked'))) { /*Si ningun input de name sexo esta seleccionado
+        mensaje+= "<p>Debe seleccionar un sexo</p>";  
+        error++;
+    }
+    
+    //Validamos un campo de tipo checkbox, por ejemplo condiciones
+    if (!($("#condiciones").is(':checked'))){ 
+        mensaje+= "<p>Debe Aceptar los terminos y condiciones</p>";
+        error++;
+    }
+    */
+>>>>>>> bd456ac3fd0b530acf68851716f20074bcc5cb7b
