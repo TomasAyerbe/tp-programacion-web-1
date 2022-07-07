@@ -26,9 +26,12 @@ body {
 }
 
 .menu li {
-    width: 25%;
+    width: 20%;
     list-style: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
 }
 
 .menu li:hover {
@@ -38,7 +41,7 @@ body {
 
 .menu a {
 	text-decoration: none;
-	padding: 0 30px;
+	padding: 0 12px;
 }
 
 .icono {
@@ -52,6 +55,13 @@ body {
 	color: #fff;
 	font-size: 15px;
 	transition: 0.5s;
+}
+
+#filtroPeliculas, #filtroSeries {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 750px) {

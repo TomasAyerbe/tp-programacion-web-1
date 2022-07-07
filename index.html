@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="css/pantalla-principal.css">
     <link rel="stylesheet" href="css/fuentes.css">
     <link rel="icon" type="image/png" href="img/page-logo.png">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/filtro-series-peliculas.js"></script>
+    <script src="js/filtro-categorias.js"></script>
+    <script src="js/filtro-nombre.js"></script>
+    <script src="js/cerrar-sesion.js"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
             <ul>
-                <li><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
-                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
-                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
+                <li id="home"><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
+                <li id="filtroPeliculas"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></li>
+                <li id="filtroSeries"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></li>
                 <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
+                <li id="cerrar-sesion"><a href="login.html"><img src="img/cerrar-sesion.png" alt="Perfil" class="icono"><span>Salir</span></a></li>
             </ul>
         </nav>
     </header>
@@ -27,25 +33,30 @@
                 <label for="categoria">Categorías</label>
                 <select name="categoria" id="categoria" class="seleccionar-categoria">
                     <option value="">Seleccionar categoría</option>
-                    <option value="1">Películas</option>
-                    <option value="2">Series</option>
+                    <option value="1">Acción</option>
+                    <option value="2">Aventura</option>
+                    <option value="3">Ciencia ficción</option>
+                    <option value="4">Crimen</option>
+                    <option value="5">Drama</option>
+                    <option value="6">Ficción histórica</option>
+                    <option value="7">Suspenso</option>
                 </select>
             </div>
             <input type="text" id="busqueda" name="busqueda" placeholder="Buscar por nombre" class="buscar-nombre" autocomplete="off">
         </section>
-        <section class="grilla">
-            <a href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="Breaking Bad"></a>
-            <a href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"></a>
-            <a href="dark.html"><img src="img/dark.jpg" alt="Dark"></a>
-            <a href="el-irlandes.html"><img src="img/el-irlandes.jpg" alt="El Irlandés"></a>
-            <a href="interestelar.html"><img src="img/interstelar.jpg" alt="Interestelar"></a>
-            <a href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="La Casa De Papel"></a>
-            <a href="parasite.html"><img src="img/parasite.jpg" alt="Parásitos"></a>
-            <a href="rapidos-y-furiosos.html"><img src="img/rapidos-y-furiosos.jpg" alt="Rápidos y Furiosos"></a>
-            <a href="roma.html"><img src="img/roma.jpg" alt="Rom"></a>
-            <a href="stranger-things.html"><img src="img/stranger-things.jpg" alt="Stranger Things"></a>
-            <a href="the-social-network.html"><img src="img/the-social-network.jpg" alt="Red Social"></a>
-            <a href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="The Umbrella Academy"></a>
+        <section id="grilla">
+            <a class="serie crimen suspenso" href="breaking-bad.html"><img src="img/breaking-bad.jpg" alt="Breaking Bad"><span>Breaking Bad</span></a>
+            <a class="serie accion" href="daredevil.html"><img src="img/daredevil.jpg" alt="Daredevil"><span>Daredevil</span></a>
+            <a class="serie ciencia-ficcion" href="dark.html"><img src="img/dark.jpg" alt="Dark"><span>Dark</span></a>
+            <a class="pelicula crimen drama" href="el-irlandes.html"><img src="img/el-irlandes.jpg" alt="El Irlandés"><span>El Irlandés</span></a>
+            <a class="pelicula aventura ciencia-ficcion" href="interestelar.html"><img src="img/interstelar.jpg" alt="Interestelar"><span>Interestelar</span></a>
+            <a class="serie accion suspenso" href="la-casa-de-papel.html"><img src="img/la-casa-de-papel.jpg" alt="La Casa De Papel"><span>La Casa De Papel</span></a>
+            <a class="pelicula drama suspenso" href="parasite.html"><img src="img/parasite.jpg" alt="Parásitos"><span>Parasite</span></a>
+            <a class="pelicula accion aventura" href="rapidos-y-furiosos.html"><img src="img/rapidos-y-furiosos.jpg" alt="Rápidos y Furiosos"><span>Rápidos y Furiosos</span></a>
+            <a class="pelicula drama" href="roma.html"><img src="img/roma.jpg" alt="Roma"><span>Roma</span></a>
+            <a class="serie aventura ciencia-ficcion" href="stranger-things.html"><img src="img/stranger-things.jpg" alt="Stranger Things"><span>Stranger Things</span></a>
+            <a class="pelicula drama ficcion-historica" href="the-social-network.html"><img src="img/the-social-network.jpg" alt="Red Social"><span>The Social Network</span></a>
+            <a class="serie accion ciencia-ficcion" href="the-umbrella-academy.html"><img src="img/the-umbrella-academy.jpg" alt="The Umbrella Academy"><span>The Umbrella Academy</span></a>
         </section>
     </main>
 </body>

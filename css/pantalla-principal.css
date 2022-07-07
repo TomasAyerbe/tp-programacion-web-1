@@ -39,7 +39,7 @@
     width: 244px;
 }
 
-.grilla {
+#grilla {
     width: 95%;
     display: flex;
     flex-wrap: wrap;
@@ -47,17 +47,21 @@
     justify-content: space-evenly;
 }
 
-.grilla a {
+#grilla a {
     margin: 5px;
 }
 
-.grilla img {
+#grilla img {
     width: 311px;
     border-radius: 10px;
 }
 
-.grilla img:hover {
+#grilla img:hover {
     filter: brightness(70%);
+}
+
+#grilla span {
+    display: none;
 }
 
 @media screen and (min-width: 750px) {
@@ -105,11 +109,11 @@
         
     }
 
-    .grilla a {
+    #grilla a {
         margin: 5px;
     }
 
-    .grilla img {
+    #grilla img {
         width: 340px;
     }
 

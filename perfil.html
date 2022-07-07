@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="css/perfil.css">
     <link rel="stylesheet" href="css/fuentes.css">
     <link rel="icon" type="image/png" href="img/page-logo.png">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/filtro-series-peliculas.js"></script>
+    <script src="js/cerrar-sesion.js"></script>
+    <script src="js/perfil.js"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
             <ul>
-                <li><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
-                <li><a href="peliculas.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
-                <li><a href="series.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
+                <li id="home"><a href="index.html"><img src="img/home.png" alt="Home" class="icono"><span>Home</span></a></li>
+                <li id="filtroPeliculas"><a href="index.html"><img src="img/peliculas.png" alt="Películas" class="icono"><span>Películas</span></a></li>
+                <li id="filtroSeries"><a href="index.html"><img src="img/series.png" alt="Series" class="icono"><span>Series</span></a></li>
                 <li><a href="perfil.html"><img src="img/perfil.png" alt="Perfil" class="icono"><span>Perfil</span></a></li>
+                <li id="cerrar-sesion"><a href="login.html"><img src="img/cerrar-sesion.png" alt="Perfil" class="icono"><span>Salir</span></a></li>
             </ul>
         </nav>
     </header>
@@ -25,9 +30,9 @@
         <section class="contenedor">
             <div class="imagen-nombre">
                 <img src="img/profile-photo.png" alt="Foto de perfil">
-                <span>Nombre de usuario</span>
+                <span class="nombre-usuario"></span>
             </div>
-            <form action="#" method="post" autocomplete="off">
+            <form action="index.html" method="post" autocomplete="off">
                 <article class="datos">
                     <div class="campo-dato">
                         <h3>E-mail</h3>
@@ -39,40 +44,42 @@
                     </div>
                     <div class="campo-dato">
                         <label for="password">Nueva Contraseña</label>
-                    <input type="password" id="password-1" name="contrasenia" placeholder="Ingrese nueva contraseña" class="campo-texto" required>
+                    <input type="password" id="password-1" name="contrasenia" placeholder="Ingrese nueva contraseña" class="campo-texto">
                     </div>
                     <div class="campo-dato">
                         <label for="password">Repetir Contraseña</label>
-                        <input type="password" id="password-2" name="contrasenia" placeholder="Ingrese nueva contraseña" class="campo-texto" required>
+                        <input type="password" id="password-2" name="contrasenia" placeholder="Ingrese nueva contraseña" class="campo-texto">
                     </div>
+                    <p class="error-contrasena">La contraseña no es válida.</p>
                 </article>
                 <article class="pago">
                     <h2>Métodos de pago</h2>
                     <div class="metodo-pago">
-                        <input type="radio" id="tarjeta" name="pago">
+                        <input type="radio" id="tarjeta" name="pago" value="tarjeta">
                         <label for="tarjeta">Tarjeta de crédito</label>
                         <br>
                         <input type="number" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
                         <input type="number" id="codigo-seguridad" name="codigo-tarjeta" placeholder="CVV">
                     </div>
                     <div class="metodo-pago">
-                        <input type="radio" id="cupon" name="pago">
+                        <input type="radio" id="cupon" name="pago" value="cupon">
                         <label for="cupon">Cupón de pago</label>
                         <br>
-                        <input type="checkbox" id="pago-facil" name="cupon">
+                        <input type="checkbox" id="pago-facil" name="cupon" class="cupon" value="Pago Fácil">
                         <label for="pago-facil">Pago Fácil</label>
-                        <input type="checkbox" id="rapi-pago" name="cupon">
+                        <input type="checkbox" id="rapi-pago" name="cupon" class="cupon" value="Rapi Pago">
                         <label for="rapi-pago">Rapi Pago</label>
                     </div>
                     <div class="metodo-pago">
-                        <input type="radio" id="transferencia" name="pago" checked>
+                        <input type="radio" id="transferencia" name="pago" value="transferencia">
                         <label for="transferencia">Transferencia bancaria</label>
                         <br>
                         <span>CBU: 01702046600000087865</span>
                     </div>
+                    <p class="error-tarjeta">La tarjeta no es válida.</p>
                 </article>
                 <div class="botones">
-                    <input type="submit" value="Guardar cambios" class="guardar-cambios">
+                    <input type="submit" href="index.html" id="guardar-cambios" value="Guardar cambios" class="guardar-cambios">
                     <input type="submit" value="Cancelar subscripción" class="cancelar-subscripcion">
                 </div>
             </form>

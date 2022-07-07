@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/fuentes.css">
     <link rel="stylesheet" href="css/registro.css">
     <link rel="icon" type="image/png" href="img/page-logo.png">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/registro.js"></script>
 </head>
 <body>
     <header class="encabezado">
@@ -16,7 +18,7 @@
     </header>
     <main>
         <section class="contenedor">
-            <form form action="#" method="post" autocomplete="off">
+            <form form action="#" method="post" autocomplete="off" id="form">
                 <article class="datos">
                     <div class="campo-dato">
                         <label for="nombre">Nombre </label>
@@ -71,6 +73,9 @@
                         <input type="button" value="Cancelar" class="boton-cancelar" onclick="location.href='login.html'">
                     </div>
                 </article>
+                <div id="mensaje" class="error">
+
+                </div>
             </form>
         </section>
     </main>
