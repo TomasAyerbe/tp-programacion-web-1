@@ -13,7 +13,7 @@ $(document).ready(function(){
     $('.cupon').prop('checked', false);
 
     //mostrar el nombre del usuario debajo de la imagen.
-    $('.nombre-usuario').text(localStorage.getItem('nombreUsuario'));
+    $('.nombre-usuario').text(localStorage.getItem('Nombre de Usuario'));
 
     $('input[type="password"]').keyup(function(){
         let password1 = $('#password-1').val();

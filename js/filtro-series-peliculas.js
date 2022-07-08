@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
     $('#filtroPeliculas').click(function(){
-        localStorage.setItem('Filtro', 'peliculas');
         $('.pelicula').show();
         $('.serie').hide();
     });
 
     $('#filtroSeries').click(function(){
+        localStorage.clear('Filtro');
         localStorage.setItem('Filtro', 'series');
         $('.serie').show();
         $('.pelicula').hide();

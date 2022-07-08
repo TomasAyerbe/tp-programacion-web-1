@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="img/page-logo.png">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/registro.js"></script>
+    <script src="js/perfil.js"></script>
 </head>
 <body>
     <header class="encabezado">
@@ -48,28 +49,28 @@
                 <article class="pago">
                     <h2>Métodos de pago</h2>
                     <div class="metodo-pago">
-                        <input type="radio" id="tarjeta" name="pago">
+                        <input type="radio" id="tarjeta" name="pago" value="tarjeta">
                         <label for="tarjeta">Tarjeta de crédito</label>
                         <br>
                         <input type="number" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
                         <input type="number" id="codigo-seguridad" name="codigo-tarjeta" placeholder="CVV">
                     </div>
                     <div class="metodo-pago">
-                        <input type="radio" id="cupon" name="pago">
+                        <input type="radio" id="cupon" name="pago" value="cupon">
                         <label for="cupon">Cupón de pago</label>
                         <br>
-                        <input type="checkbox" id="pago-facil" name="cupon">
+                        <input type="checkbox" id="pago-facil" name="cupon" class="cupon" value="Pago Fácil">
                         <label for="pago-facil">Pago Fácil</label>
-                        <input type="checkbox" id="rapi-pago" name="cupon">
+                        <input type="checkbox" id="rapi-pago" name="cupon" class="cupon" value="Rapi Pago">
                         <label for="rapi-pago">Rapi Pago</label>
                     </div>
                     <div class="metodo-pago">
-                        <input type="radio" id="transferencia" name="pago" checked>
+                        <input type="radio" id="transferencia" name="pago" value="transferencia">
                         <label for="transferencia">Transferencia bancaria</label>
                         <br>
                         <span>CBU: 01702046600000087865</span>
                         <br>
-                        <input type="submit" value="Confirmar" class="boton-confirmar">
+                        <input type="submit" value="Confirmar" id="guardar-cambios" class="boton-confirmar">
                         <input type="button" value="Cancelar" class="boton-cancelar" onclick="location.href='login.html'">
                     </div>
                 </article>

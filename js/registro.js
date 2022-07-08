@@ -7,7 +7,6 @@ function validar(){
     var regexLetrasNumeros=/^[0-9A-Za-z]+$/;
     let regexContraseña = /^(?=.{2,}[A-Za-z])(?=.{2,}\d)(?=.{2,}[@$!%#?&])[A-Za-z\d@$!%#?&]{8,}$/;
 
-
     reset();
     if (!$("#nombre").val().match(regexLetras)){ /*valida que nombre sean solo letras y no este vacio*/
        /* console.log($("#nombre").val()) */
@@ -29,22 +28,6 @@ function validar(){
         mensaje+= "<p>Usuario solo acepta tener letras y numeros</p>";
         error++;
         $("#nombre-de-usuario").addClass('error');
-     }
-     if(!$("#Contraseña").val().match(regexContraseña)) {
-        console.log($("#Contraseña").val());
-        mensaje+= "<p> 8 caracteres ( mínimo 2 letras, 2 números y 2 caracteres especiales)</p>";
-        error++;
-        $("#Contraseña").addClass('error')
-     }
-     if ($("#repetir-contraseña").val()!=$("#Contraseña").val()){
-        mensaje+= "<p> Tiene que ser igual a contraseña</p>";
-        error++;
-        $("#repetir-contraseña").addClass('error');
-     }
-     if (/^([1-9]){3}$/.test($("#codigo-seguridad").val())) {
-        mensaje+= "<p> El codigo de seguridad no pueden ser 3 ceros</p>";
-        error++;
-        $("#codigo-seguridad").addClass('error');
      }
 
     /*Si error es mayor a 0 retorna falso y muestra todo los mensajes de errores acumulado en la variable mensaje*/
@@ -72,14 +55,8 @@ $(document).ready(function() {
         return validar();
     });
     $("#nombre").keyup(function() {
-
         validar();
-    }); 
-   /* let nombre=document.getElementById("nombre");
-     nombre.onkeyup=function(){
-        console.log(nombre.value)
-        validar();
-     } */
+    });
     $("#apellido").keyup(function() {
         validar();
     });
@@ -88,18 +65,6 @@ $(document).ready(function() {
     });
     $("#nombre-de-usuario").keyup(function(){
         validar();
-    })
-    $("#Contraseña").keyup(function(){
-        validar();
-    })
-
-    $("#repetir-contraseña").keyup(function(){
-        validar();
-    })
-
-    $("#codigo-seguridad").keyup(function(){
-        validar();
-    })
-
-
+    });
+    
 });
