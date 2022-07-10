@@ -1,3 +1,5 @@
+
+/* la funcion validar como indica su nombre, hace validaciones usando los selectores, si no se cumplen las validaciones salen mensajes y se acumulan errores*/
 function validar(){
     var regexemail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/; //expresion regular para emails validos
     var mensaje =""; //variable que va a almacenar todos los mensajes de error
@@ -15,12 +17,17 @@ function validar(){
         $("#Usuario").addClass('error');
     }
     if (error>0){
-
         $("#mensaje").append(mensaje); //agregamos al div de id mensaje, los mensajes de error acumulados en la variable mensaje
+        $(".boton-enviar").click(function(){ //No te dejar usar el boton enviar, esta desahabilitado
+            $(".boton-enviar").disabled()==true;
+        })
         return false;
     }
       /*Sino retorna verdadero y el formulario se envía*/
       else{
+        $(".boton-enviar").click(function(){ //Una ves que se cumplen las condiciones de validar, el boton enviar esta habilitado y se puede usar
+            $(".boton-enviar").enable()==true;
+        })
         return true;
     }
 }

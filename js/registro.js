@@ -1,3 +1,5 @@
+
+/* la funcion validar como indica su nombre, hace validaciones usando los selectores, si no se cumplen las validaciones salen mensajes y se acumulan errores*/
 function validar(){
     var regexemail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/; //expresion regular para emails validos
     var mensaje =""; //variable que va a almacenar todos los mensajes de error
@@ -29,25 +31,53 @@ function validar(){
         error++;
         $("#nombre-de-usuario").addClass('error');
      }
+    
+     /*validar la contrasena y el repetir contrasena */
+    if(!$("#Contraseña").val().match(regexContraseña)){
+        mensaje+="<p> La contraseña debe tener letras, numeros y caracteres especiales </p>"
+        error++;
+        $("#Contraseña").addClass('error');
+    } 
+
+    if($("#repetir-contraseña").val()!=$("#Contraseña")){
+        mensaje+="<p> repetir contraseña debe ser igual a contraseña </p>"
+        error++;
+        $("#repetir-contraseña").addClass('error');
+    }
+
+    /*falta validar la tarjeta */
+
 
     /*Si error es mayor a 0 retorna falso y muestra todo los mensajes de errores acumulado en la variable mensaje*/
     if (error>0){
-
         $("#mensaje").append(mensaje); //agregamos al div de id mensaje, los mensajes de error acumulados en la variable mensaje
+        $(".boton-confirmar").click(function(){ //No te dejar usar el boton-confirmar esta desahabilitado
+            $(".boton-confirmar").disabled()==true;
+        });
         return false;
     }
     /*Sino retorna verdadero y el formulario se envía*/
     else{
+        $(".boton-confirmar").click(function(){ //Una ves que se cumplen las condiciones de validar, te permite usar el boton-confirmar
+            $(".boton-confirmar").enable()==true;
+        });
         return true;
     }
 
 }
+
+
 function reset(){ /*Esta funciona elimina todas las clases de error*/
     $("#nombre").removeClass('error');
     $("#apellido").removeClass('error');
     $("#email").removeClass('error');
+    $("#Contraseña").removeClass('error');
+    $("#repetir-contraseña").removeClass('error');
     $("#mensaje").empty(); //vaciamos el contenido del div de id mensaje
+
 }
+
+
 
 $(document).ready(function() {
 

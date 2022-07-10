@@ -20,7 +20,7 @@
     <main>
         <section class="caja">
             <article>
-                <form action="index.html" method="post" autocomplete="off">
+                <form action="index.html" method="post" autocomplete="off" id="form">
                     <label for="user">Nombre de usuario</label>
                     <input type="text" id="user" name="usuario" placeholder="Ingrese su usuario" class="campo-texto" required>
                     <label for="password">Contraseña</label>
@@ -30,6 +30,9 @@
                 <hr>
                 <a href="recuperar-contrasena.html" class="boton-link">Recuperar contraseña</a>
                 <a href="registro.html" class="boton-link">Registrarse</a>
+                <div id="mensaje" class="error">
+
+                </div>
             </article>
         </section>
     </main>
