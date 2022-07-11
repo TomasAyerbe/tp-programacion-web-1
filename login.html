@@ -22,16 +22,17 @@
             <article>
                 <form action="index.html" method="post" autocomplete="off" id="form">
                     <label for="user">Nombre de usuario</label>
-                    <input type="text" id="user" name="usuario" placeholder="Ingrese su usuario" class="campo-texto" required>
+                    <input type="text" id="nombre-de-usuario" name="usuario" placeholder="Ingrese su usuario" class="campo-texto" required>
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="contrasenia" placeholder="Ingrese su contraseña" class="campo-texto" required>
-                    <input type="submit" value="Iniciar sesión" class="boton-login">
+                    <input type="submit" value="Iniciar sesión" class="boton-login" id="boton-confirmar">
                 </form>
                 <hr>
                 <a href="recuperar-contrasena.html" class="boton-link">Recuperar contraseña</a>
                 <a href="registro.html" class="boton-link">Registrarse</a>
                 <div id="mensaje" class="error">
-
+                    <p class="error-usuario">El campo usuario es obligatorio y solo puede contener letras y números.</p>
+                    <p class="error-contrasena">El campo contraseña es obligatorio y debe contener minimo 8 caracteres con 2 letras, 2 números y 2 caracteres especiales.</p>
                 </div>
             </article>
         </section>

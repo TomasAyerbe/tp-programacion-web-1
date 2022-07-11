@@ -1,100 +1,180 @@
+function validarTarjeta(numeroTarjeta) {
+    var error = 0;
 
-/* la funcion validar como indica su nombre, hace validaciones usando los selectores, si no se cumplen las validaciones salen mensajes y se acumulan errores*/
-function validar(){
-    var regexemail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/; //expresion regular para emails validos
-    var mensaje =""; //variable que va a almacenar todos los mensajes de error
-    var error =0; /*variable auxiliar que se va a utilizar para retornar o no falso. 
-                            En caso de que su valor sea 0, retornara verdadero y el formulario se enviara. En el caso de que sea mayor a 0 retornara falso.*/
-    var regexLetras=/^[A-Za-z]+$/; //expresion regular para validar solo letras
-    var regexLetrasNumeros=/^[0-9A-Za-z]+$/;
-    let regexContraseña = /^(?=.{2,}[A-Za-z])(?=.{2,}\d)(?=.{2,}[@$!%#?&])[A-Za-z\d@$!%#?&]{8,}$/;
-
-    reset();
-    if (!$("#nombre").val().match(regexLetras)){ /*valida que nombre sean solo letras y no este vacio*/
-       /* console.log($("#nombre").val()) */
-        mensaje+= "<p>El campo nombre es obligatorio y solo puede contener letras </p>";
+    if (!/^([0-9]){16,19}$/.test(numeroTarjeta)) {
         error++;
-        $("#nombre").addClass('error');
-    }
-    if(!$("#apellido").val().match(regexLetras)){
-        mensaje+= "<p>El campo apellido es obligatorio y solo puede contener letras </p>";
-        error++;
-        $("#apellido").addClass('error');
-    }
-    if(!$("#email").val().match(regexemail)){
-        mensaje+= "<p>Debe ser un email valido</p>";
-        error++;
-        $("#email").addClass('error');
-    }
-     if(!$("#nombre-de-usuario").val().match(regexLetrasNumeros)) {
-        mensaje+= "<p>Usuario solo acepta tener letras y numeros</p>";
-        error++;
-        $("#nombre-de-usuario").addClass('error');
-     }
-    
-     /*validar la contrasena y el repetir contrasena */
-    if(!$("#Contraseña").val().match(regexContraseña)){
-        mensaje+="<p> La contraseña debe tener letras, numeros y caracteres especiales </p>"
-        error++;
-        $("#Contraseña").addClass('error');
-    } 
-
-    if($("#repetir-contraseña").val()!=$("#Contraseña")){
-        mensaje+="<p> repetir contraseña debe ser igual a contraseña </p>"
-        error++;
-        $("#repetir-contraseña").addClass('error');
+    } else {
+        error = 0;
     }
 
-    /*falta validar la tarjeta */
+    let numerosTarjeta = [];
+    numerosTarjeta = descomponerNumero(numeroTarjeta);
+    let sumaNumerosTarjeta = 0;
 
+    for (var i = 0; i < numerosTarjeta.length - 1; i++) {
+        sumaNumerosTarjeta += numerosTarjeta[i];
+    }
 
-    /*Si error es mayor a 0 retorna falso y muestra todo los mensajes de errores acumulado en la variable mensaje*/
-    if (error>0){
-        $("#mensaje").append(mensaje); //agregamos al div de id mensaje, los mensajes de error acumulados en la variable mensaje
-        $(".boton-confirmar").click(function(){ //No te dejar usar el boton-confirmar esta desahabilitado
-            $(".boton-confirmar").disabled()==true;
-        });
+    //El último número de la tarjeta debe ser par si la suma de todos los números anteriores (el último no cuenta) es un número impar.
+    if ((sumaNumerosTarjeta % 2 == 0) || !(numerosTarjeta[numerosTarjeta.length - 1] % 2 == 0)) {
+        error++;
+    } else {
+        error = 0;
+    }
+
+    //El último número de la tarjeta debe ser impar si la suma de todos los números anteriores (el último no cuenta) es un número par.
+    if (!(sumaNumerosTarjeta % 2 == 0) || (numerosTarjeta[numerosTarjeta.length - 1] % 2 == 0)) {
+        error++;
+    } else {
+        error = 0;
+    }
+
+    if (error > 0) {
         return false;
-    }
-    /*Sino retorna verdadero y el formulario se envía*/
-    else{
-        $(".boton-confirmar").click(function(){ //Una ves que se cumplen las condiciones de validar, te permite usar el boton-confirmar
-            $(".boton-confirmar").enable()==true;
-        });
+    } else {
         return true;
     }
-
 }
 
-
-function reset(){ /*Esta funciona elimina todas las clases de error*/
-    $("#nombre").removeClass('error');
-    $("#apellido").removeClass('error');
-    $("#email").removeClass('error');
-    $("#Contraseña").removeClass('error');
-    $("#repetir-contraseña").removeClass('error');
-    $("#mensaje").empty(); //vaciamos el contenido del div de id mensaje
-
+function descomponerNumero(n) {
+    return [...n + ''].map(Number);
 }
 
-
-
-$(document).ready(function() {
-
-    $("#form").submit(function() {
-        return validar();
-    });
-    $("#nombre").keyup(function() {
-        validar();
-    });
-    $("#apellido").keyup(function() {
-        validar();
-    });
-    $("#email").keyup(function() {
-        validar();
-    });
-    $("#nombre-de-usuario").keyup(function(){
-        validar();
-    });
+$(document).ready(function(){
     
+    var nombreValido = false;
+    var apellidoValido = false;
+    var correoValido = false;
+    var usuarioValido = false;
+    var contrasenaValida = false;
+    var metodoValido = false;
+    
+    $('.error-nombre').hide();
+    $('.error-apellido').hide();
+    $('.error-correo').hide();
+    $('.error-usuario').hide();
+    $('.error-contrasena').hide();
+    $('.error-metodo').hide();
+    $('input[type="number"]').prop('disabled', true);
+    $('.cupon').prop('disabled', true);
+    $('#pago-facil').prop('checked', true);
+    $('#rapi-pago').prop('checked', false);
+    $('#boton-confirmar').prop('disabled', true);
+
+    $('#nombre').keyup(function(){
+        let nombre = $(this).val();
+
+        if (/^[A-Za-z]+$/.test(nombre)) {
+            nombreValido = true;
+            $('.error-nombre').hide();
+        } else {
+            nombreValido = false;
+            $('#boton-confirmar').prop('disabled', true);
+            $('.error-nombre').show();
+        }
+    });
+
+    $('#apellido').keyup(function(){
+        let apellido = $(this).val();
+
+        if (/^[A-Za-z]+$/.test(apellido)) {
+            apellidoValido = true;
+            $('.error-apellido').hide();
+        } else {
+            apellidoValido = false;
+            $('#boton-confirmar').prop('disabled', true);
+            $('.error-apellido').show();
+        }
+    });
+
+    $('#email').keyup(function(){
+        let email = $(this).val();
+
+        if (/^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/.test(email)) {
+            correoValido = true;
+            $('.error-correo').hide();
+        } else {
+            correoValido = false;
+            $('#boton-confirmar').prop('disabled', true);
+            $('.error-correo').show();
+        }
+    });
+
+    $('#nombre-de-usuario').keyup(function(){
+        let usuario = $(this).val();
+
+        if (/^[0-9A-Za-z]+$/.test(usuario)) {
+            usuarioValido = true;
+            $('.error-usuario').hide();
+        } else {
+            usuarioValido = false;
+            $('#boton-confirmar').prop('disabled', true);
+            $('.error-usuario').show();
+        }
+    });
+
+    $('input[type="password"]').keyup(function(){
+        let password1 = $('#password-1').val();
+        let password2 = $('#password-2').val();
+        
+        if (password1 == password2) {
+            if (/^(?=.{2,}\d)(?=.{2,}[~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])(?=.{2,}[a-zA-Z]).{8,}$/.test(password1)) {
+                contrasenaValida = true;
+                $('.error-contrasena').hide();
+            } else {
+                contrasenaValida = false;
+                $('#boton-confirmar').prop('disabled', true);
+                $('.error-contrasena').show();
+            }
+        } else {
+            contrasenaValida = false;
+            $('#boton-confirmar').prop('disabled', true);
+            $('.error-contrasena').show();
+        }
+    });
+
+    $('input[name="pago"]').click(function(){
+        var radio = $('input:radio[name="pago"]:checked').val();
+        $('input[type="number"]').prop('disabled', true);
+        $('.cupon').prop('disabled', true);
+
+        if (radio == "tarjeta") {
+            $('input[type="number"]').prop('disabled', false);
+            
+            $('input[name="tarjeta"]').keyup(function(){
+                let numeroTarjeta = $('#numero-tarjeta').val();
+                let codigoTarjeta = $('#codigo-seguridad').val();
+                
+                if ( validarTarjeta(numeroTarjeta) && (/^([1-9]){3}$/.test(codigoTarjeta)) ) {
+                    metodoValido = true;
+                    $('.error-metodo').hide();
+                } else {
+                    metodoValido = false;
+                    $('#boton-confirmar').prop('disabled', true);
+                    $('.error-metodo').show();
+                }
+            });
+        } else if (radio == "cupon") {            
+            $('.cupon').prop('disabled', false);
+            
+            $('.cupon').change(function(){
+                $('.cupon').not(this).prop('checked', false); 
+            });
+
+            metodoValido = true;
+            $('.error-metodo').hide();
+        } else if (radio == "transferencia") {
+            metodoValido = true;
+            $('.error-metodo').hide();
+        }  
+    });
+
+    $('input').keyup(function(){
+        if (nombreValido && apellidoValido && correoValido && usuarioValido && contrasenaValida && metodoValido) {
+            $('#boton-confirmar').prop('disabled', false);
+        } else {
+            $('#boton-confirmar').prop('disabled', true);
+        }
+    });
+
 });

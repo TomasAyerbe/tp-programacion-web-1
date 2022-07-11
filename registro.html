@@ -11,7 +11,6 @@
     <link rel="icon" type="image/png" href="img/page-logo.png">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/registro.js"></script>
-    <script src="js/perfil.js"></script>
 </head>
 <body>
     <header class="encabezado">
@@ -39,11 +38,11 @@
                     </div>
                     <div class="campo-dato">
                         <label for="apellido">Contraseña </label>
-                        <input type="password" name="Contraseña" id="Contraseña" placeholder="Ingrese su contraseña" class="campo-texto" required>
+                        <input type="password" name="Contraseña" id="password-1" placeholder="Ingrese su contraseña" class="campo-texto" required>
                     </div>
                     <div class="campo-dato">
                         <label for="apellido">Repetir Contraseña </label>
-                        <input type="password" name="repetir-contraseña" id="repetir-contraseña" placeholder="Repetir contraseña" class="campo-texto" required>
+                        <input type="password" name="repetir-contraseña" id="password-2" placeholder="Repetir contraseña" class="campo-texto" required>
                     </div>  
                 </article>
                 <article class="pago">
@@ -52,8 +51,8 @@
                         <input type="radio" id="tarjeta" name="pago" value="tarjeta">
                         <label for="tarjeta">Tarjeta de crédito</label>
                         <br>
-                        <input type="number" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
-                        <input type="number" id="codigo-seguridad" name="codigo-tarjeta" placeholder="CVV">
+                        <input type="number" id="numero-tarjeta" name="tarjeta" placeholder="Número de tarjeta">
+                        <input type="number" id="codigo-seguridad" name="tarjeta" placeholder="CVV">
                     </div>
                     <div class="metodo-pago">
                         <input type="radio" id="cupon" name="pago" value="cupon">
@@ -70,12 +69,17 @@
                         <br>
                         <span>CBU: 01702046600000087865</span>
                         <br>
-                        <input type="submit" value="Confirmar" id="guardar-cambios" class="boton-confirmar">
+                        <input type="submit" value="Confirmar" id="boton-confirmar" class="boton-confirmar">
                         <input type="button" value="Cancelar" class="boton-cancelar" onclick="location.href='login.html'">
                     </div>
                 </article>
                 <div id="mensaje" class="error">
-
+                    <p class="error-nombre">El campo nombre es obligatorio y solo puede contener letras.</p>
+                    <p class="error-apellido">El campo apellido es obligatorio y solo puede contener letras.</p>
+                    <p class="error-correo">El campo correo electrónico es obligatorio y debe contener un email válido.</p>
+                    <p class="error-usuario">El campo usuario es obligatorio y solo puede contener letras y números.</p>
+                    <p class="error-contrasena">El campo contraseña es obligatorio y debe contener minimo 8 caracteres con 2 letras, 2 números y 2 caracteres especiales.</p>
+                    <p class="error-metodo">El campo método de pago es obligatorio y debe contener uno válido</p>
                 </div>
             </form>
         </section>
