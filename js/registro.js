@@ -169,7 +169,7 @@ $(document).ready(function(){
         }  
     });
 
-    $('input').keyup(function(){
+    $('input').change(function(){
         if (nombreValido && apellidoValido && correoValido && usuarioValido && contrasenaValida && metodoValido) {
             $('#boton-confirmar').prop('disabled', false);
         } else {
